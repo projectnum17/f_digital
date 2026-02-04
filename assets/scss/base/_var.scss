@@ -1,0 +1,36 @@
+@use 'media' as *;
+@use 'mixins' as *;
+
+:root {
+    --ff-base: 'Suisse', sans-serif;
+    --ff-sec: 'Helvetica', sans-serif;
+
+    --container-lg: #{rem(1840px)};
+    --container-md: #{rem(1460px)};
+    --container-padding: #{rem(20px)};
+    --section-indent: #{rem(132px)};
+
+    --lght_grey: #f2f2f2;
+    --lght_prpl: #5a2d75;
+    --drk_prpl: #250c34;
+    --simple_prpl: #d5c8dd;
+    --white: #ffffff;
+    --black: #1f1b21;
+
+    --accent_gradient: linear-gradient(180deg, #250c34 0%, #5a2d75 100%);
+}
+
+@include media('desktop') {
+    :root {
+    }
+}
+
+@include media('tablet') {
+    :root {
+    }
+}
+
+@include media('mobile') {
+    :root {
+    }
+}
