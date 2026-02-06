@@ -174,8 +174,8 @@
                 content: '';
                 width: rem(16px);
                 height: rem(16px);
-                background: url('../imgs/ico/ico-check.svg') no-repeat center
-                    center / contain;
+                background: url('../imgs/ico/ico-check_wht.svg') no-repeat
+                    center center / contain;
                 opacity: 0;
                 @include transitions(
                     0.3s,
@@ -217,6 +217,62 @@
             opacity: 1;
             bottom: -2px;
             visibility: visible;
+        }
+    }
+
+    &--lght {
+        .select-styled {
+            border-color: #d9d8d9;
+            background-color: var(--white);
+
+            &:hover,
+            &:focus {
+                border-color: var(--lght_prpl);
+            }
+
+            &::after {
+                background: url('../imgs/ico/ico-drop_bd.svg') no-repeat center
+                    center / cover;
+            }
+
+            &.active {
+                background-color: var(--simple_prpl);
+                border-color: var(--lght_prpl);
+            }
+
+            .selected-text {
+                color: var(--drk_prpl);
+
+                &::before {
+                    background: url('../imgs/ico/ico-location_d.svg') no-repeat
+                        center center;
+                }
+            }
+        }
+
+        .select-options {
+            background: var(--simple_prpl);
+            border-color: var(--drk_prpl);
+
+            li {
+                &.is-selected {
+                    color: var(--drk_prpl);
+                }
+                @include hover {
+                    color: var(--drk_prpl);
+                }
+                &:not(:last-child) {
+                    border-bottom: 1px solid var(--drk_prpl);
+                }
+                &::after {
+                    background: url('../imgs/ico/ico-check.svg') no-repeat
+                        center center / contain;
+                }
+            }
+        }
+
+        .placeholder-text {
+            color: rgba(37, 12, 52, 0.5);
         }
     }
 }

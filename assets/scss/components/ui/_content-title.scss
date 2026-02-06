@@ -3,4 +3,7 @@
 
 .content-title {
     font: 700 #{rem(52px)} / 90% var(--ff-base);
+    span {
+        color: var(--lght_prpl);
+    }
 }

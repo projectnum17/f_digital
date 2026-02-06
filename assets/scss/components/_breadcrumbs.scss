@@ -1,0 +1,32 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.breadcrumbs {
+    display: flex;
+    gap: rem(6px);
+    align-items: center;
+
+    li:not(:last-child) {
+        opacity: 0.4;
+    }
+    li:not(:first-child) {
+        a {
+            display: inline-flex;
+            align-items: center;
+            gap: rem(6px);
+            &::before {
+                content: '/';
+                display: inline-flex;
+                width: rem(20px);
+                height: rem(20px);
+                align-items: center;
+                justify-content: center;
+                color: var(--lght_prpl);
+            }
+        }
+    }
+
+    a {
+        font: 600 #{rem(16px)} / 100% var(--ff-base);
+    }
+}

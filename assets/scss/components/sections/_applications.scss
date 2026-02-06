@@ -1,0 +1,109 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.applications {
+    margin-bottom: rem(80px);
+    .breadcrumbs {
+        margin-bottom: rem(104px);
+    }
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: rem(20px);
+    }
+
+    .content-title {
+        margin-bottom: rem(24px);
+    }
+
+    &__content {
+        max-width: rem(777px);
+    }
+
+    &__pic {
+        max-width: rem(586px);
+        img {
+            width: 100%;
+        }
+    }
+
+    &__descr {
+        font: 400 #{rem(18px)} / 140% var(--ff-base);
+        margin-bottom: rem(40px);
+    }
+
+    &__selects {
+        display: flex;
+        align-items: center;
+        gap: rem(24px);
+        margin-bottom: rem(24px);
+    }
+
+    &__target {
+        max-width: rem(708px);
+        display: flex;
+        align-items: center;
+        gap: rem(2px);
+        width: 100%;
+        border-radius: rem(16px);
+        padding: rem(3px);
+        border: 1px solid #d9d8d9;
+        background: var(--white);
+    }
+
+    &__btn {
+        font: 600 #{rem(18px)} / 90% var(--ff-base);
+        border-radius: rem(12px);
+        padding: rem(18px) rem(2px);
+        gap: rem(8px);
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        &.is-active {
+            &::after {
+                transform: translateY(0);
+            }
+            color: var(--lght_grey);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            transform: translateY(100%);
+            pointer-events: none;
+            background-color: var(--lght_prpl);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem(8px);
+            position: relative;
+            z-index: 2;
+        }
+
+        svg {
+            flex-shrink: 0;
+            display: inline-flex;
+            width: rem(24px);
+            height: rem(24px);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+}

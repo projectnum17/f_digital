@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/imgs/favicon/favicon.png" type="image/png">
-    <title>Fobos Digital | Home</title>
+    <title>Fobos Digital | Tarifs</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/main.min.css">
 
@@ -137,109 +137,25 @@
         </div>
     </header>
     <main class="main">
-        <section class="intro">
+        <section class="applications">
             <div class="container">
-                <div class="intro__content">
-                    <div class="intro__heading">
-                        <h2 class="intro__subtitle">Надійний швидкісний інтернет</h2>
-                        <h1 class="intro__title">
-                            до <span>1000</span> Мбіт/с
-                        </h1>
-                    </div>
-                    <a href="javascript: void(0)" class="intro__link">замовити підключення</a>
-                    <ul class="intro__list">
+                <div class="applications__content">
+                    <ul class="breadcrumbs">
                         <li>
-                            <img width="32" height="32" src="./assets/imgs/ico/ico-electric.svg" alt="Icon">
-                            Повна енергонезалежність
+                            <a href="javascript: void(0)">Головна</a>
                         </li>
                         <li>
-                            <img width="32" height="32" src="./assets/imgs/ico/ico-wallet.svg" alt="Icon">
-                            Від 200 грн на міс.
-                        </li>
-                        <li>
-                            <img width="32" height="32" src="./assets/imgs/ico/ico-wifi.svg" alt="Icon">
-                            Легке підключення за 1 день
+                            <a href="javascript: void(0)">Тарифи</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-            <video muted autoplay loop playsinline class="intro__bg js-video-autoplay"
-                poster="./assets/video/poster.jpg">
-                <source data-src="./assets/video/hole.mp4" type="video/mp4">
-                <p>Your browser does not support the video tag.</p>
-            </video>
-        </section>
-        <section class="benefits">
-            <div class="container">
-                <ul class="benefits__list">
-                    <li>
-                        <a href="javascript: void(0)" class="benefit-box">
-                            <div class="benefit-box__content">
-                                <img src="./assets/imgs/ico/b_1.svg" alt="Icon" class="benefit-box__pic">
-                                <p class="benefit-box__title">Телебачення</p>
-                            </div>
-                            <span class="benefit-box__mask"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript: void(0)" class="benefit-box">
-                            <div class="benefit-box__content">
-                                <img src="./assets/imgs/ico/b_2.svg" alt="Icon" class="benefit-box__pic">
-                                <p class="benefit-box__title">
-                                    Побудова корпоративних локальних мереж
-                                </p>
-                            </div>
-                            <span class="benefit-box__mask"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript: void(0)" class="benefit-box">
-                            <div class="benefit-box__content">
-                                <img src="./assets/imgs/ico/b_3.svg" alt="Icon" class="benefit-box__pic">
-                                <p class="benefit-box__title">
-                                    Відеоспостереження (встановлення та обслуговування)
-                                </p>
-                            </div>
-                            <span class="benefit-box__mask"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript: void(0)" class="benefit-box">
-                            <div class="benefit-box__content">
-                                <img src="./assets/imgs/ico/b_4.svg" alt="Icon" class="benefit-box__pic">
-                                <p class="benefit-box__title">
-                                    Сервісне обслуговування,
-                                    ремонт техніки
-                                </p>
-                            </div>
-                            <span class="benefit-box__mask"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript: void(0)" class="benefit-box">
-                            <div class="benefit-box__content">
-                                <img src="./assets/imgs/ico/b_5.svg" alt="Icon" class="benefit-box__pic">
-                                <p class="benefit-box__title">
-                                    Обслуговування, ремонт та заправка картриджів
-                                </p>
-                            </div>
-                            <span class="benefit-box__mask"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="tariffs">
-            <div class="container">
-                <div class="tariffs__content">
-                    <div class="tariffs__head">
-                        <h2 class="content-title">Тарифи без сюрпризів</h2>
-                        <p class="tariffs__subtitle">
-                            Жодних прихованих платежів. Ви точно знаєте, за що платите.
-                        </p>
-                    </div>
-                    <div class="tariffs__flow">
-                        <div class="select-box">
+                    <h2 class="content-title">
+                        Підключайте стабільний <br> <span>Домашній Інтернет</span>
+                    </h2>
+                    <p class="applications__descr">
+                        Тарифи на послуги інтернету для користувачів домашньої локальної мережі. (Для приватних осіб)
+                    </p>
+                    <div class="applications__selects">
+                        <div class="select-box select-box--lght">
                             <select class="js-select" id="regionSelect" name="regionSelect">
                                 <option value="" disabled selected>
                                     Ваш регіон:
@@ -249,7 +165,7 @@
                                 <option value="3">Полтавська область 3</option>
                             </select>
                         </div>
-                        <div class="select-box">
+                        <div class="select-box select-box--lght">
                             <select class="js-select" id="areaSelect" name="areaSelect">
                                 <option value="" disabled selected>
                                     Населений пункт
@@ -260,13 +176,81 @@
                             </select>
                         </div>
                     </div>
-                    <div class="tariffs__deco deco-l">
-                        <img src="./assets/imgs/mirror-l.png" alt="">
-                    </div>
-                    <div class="tariffs__deco deco-r">
-                        <img src="./assets/imgs/mirror-r.png" alt="">
+                    <div class="applications__target">
+                        <button type="button" class="applications__btn js-appl-btn">
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2H6C3.518 2 3 2.518 3 5V22H15V5C15 2.518 14.482 2 12 2Z"
+                                        stroke="#F2F2F2" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M18 8H15V22H21V11C21 8.518 20.482 8 18 8Z" stroke="#F2F2F2"
+                                        stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M8 6H10M8 9H10M8 12H10" stroke="#F2F2F2" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M11.5 22V18C11.5 17.0572 11.5 16.5858 11.2071 16.2929C10.9142 16 10.4428 16 9.5 16H8.5C7.55719 16 7.08579 16 6.79289 16.2929C6.5 16.5858 6.5 17.0572 6.5 18V22"
+                                        stroke="#F2F2F2" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                                Багатоповерхівки
+                            </span>
+                        </button>
+                        <button type="button" class="applications__btn js-appl-btn">
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 10L7 4M7 4L12.4142 9.41421C12.7032 9.70324 12.8478 9.84776 13.0315 9.92388C13.2153 10 13.4197 10 13.8284 10H22L18.1994 5.43926C17.6096 4.73152 17.3147 4.37764 16.9116 4.18882C16.5084 4 16.0478 4 15.1265 4H7Z"
+                                        stroke="#250C34" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M11 8V20H3V8.85714" stroke="#250C34" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11 20H21V9" stroke="#250C34" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M4 7.5V4" stroke="#250C34" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M7.00801 12H6.99902" stroke="#250C34" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7 20V16" stroke="#250C34" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M15 14H17" stroke="#250C34" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                Приватний сектор
+                            </span>
+                        </button>
+                        <button type="button" class="applications__btn js-appl-btn">
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.3332 8.74998L10.7353 2.3517C10.5294 2.17837 10.2689 2.08331 9.99984 2.08331C9.73075 2.08331 9.47025 2.17837 9.26442 2.3517L1.6665 8.74998"
+                                        stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M17.0832 4.16669V12.9167C17.0832 15.2737 17.0832 16.4522 16.3509 17.1844C15.6187 17.9167 14.4402 17.9167 12.0832 17.9167H7.9165C5.55948 17.9167 4.38097 17.9167 3.64874 17.1844C2.9165 16.4522 2.9165 15.2737 2.9165 12.9167V7.91669"
+                                        stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8.74984 9.58331H7.9165V10.4166H8.74984V9.58331Z" stroke="#141B34"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.0833 9.58331H11.25V10.4166H12.0833V9.58331Z" stroke="#141B34"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.74984 12.9167H7.9165V13.75H8.74984V12.9167Z" stroke="#141B34"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12.0833 12.9167H11.25V13.75H12.0833V12.9167Z" stroke="#141B34"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Садові товариства
+                            </span>
+                        </button>
                     </div>
                 </div>
+                <div class="applications__pic">
+                    <img src="./assets/imgs/pic.svg" alt="Picture">
+                </div>
+            </div>
+        </section>
+        <section class="tariffs">
+            <div class="container">
                 <div class="tariffs__handler">
                     <button type="button" class="btn-nav js-tariffs-prev">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -504,175 +488,10 @@
                 </div>
             </div>
         </section>
-        <section class="choosing">
-            <div class="container">
-                <div class="choosing__content">
-                    <p class="content-title">Чому обирають </p>
-                    <h2 class="choosing__title">FOBOS DIGITAL</h2>
-                    <ul class="choosing__list">
-                        <li class="choosing__point">
-                            <div class="choosing__description">
-                                <p class="choosing__category">
-                                    Інтернет, що не вимикається разом зі світлом
-                                </p>
-                                <p class="choosing__text">
-                                    Наше серверне обладнання забезпечене резервним живленням. При обранні
-                                    оптоволоконного
-                                    підключення ви залишаєтеся онлайн навіть під час повного блекауту. Подбайте лише про
-                                    альтернативне живлення своїх пристроїв.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="choosing__point">
-                            <div class="choosing__description">
-                                <p class="choosing__category">
-                                    Завжди стабільно. Завжди швидко.
-                                </p>
-                                <p class="choosing__text">
-                                    Фільми, робота, навчання чи ігри — інтернет працює без гальм, затримок та обривів у
-                                    будь-якій ситуації.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="choosing__point">
-                            <div class="choosing__description">
-                                <p class="choosing__category">
-                                    Підтримка, що реагує миттєво
-                                </p>
-                                <p class="choosing__text">
-                                    Ми оперативно відповідаємо на звернення та вирішуємо більшість питань уже під час
-                                    першого контакту.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="choosing__point">
-                            <div class="choosing__description">
-                                <p class="choosing__category">
-                                    Технічна допомога без вихідних
-                                </p>
-                                <p class="choosing__text">
-                                    Не потрібно чекати робочого дня — наша технічна підтримка доступна щодня, без перерв
-                                    та
-                                    вихідних.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="choosing__point">
-                            <div class="choosing__description">
-                                <p class="choosing__category">
-                                    Сучасне обладнання — максимум комфорту
-                                </p>
-                                <p class="choosing__text">
-                                    Безкоштовно налаштовуємо ваше телекомунікаційне обладнання, забезпечуючи стабільну
-                                    роботу та зручність у користуванні.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="choosing__pic">
-                    <img src="./assets/imgs/choosing.svg" alt="Picture">
-                </div>
-            </div>
-        </section>
-        <section class="panel">
-            <div class="container">
-                <div class="panel__pay">
-                    <h2 class="content-title">Доступні варіанти поповнення рахунку</h2>
-                    <ul class="panel__pay-list">
-                        <li class="panel__pay-item">
-                            <div class="panel__pay-content">
-                                <p class="panel__pay-subtitle">Онлайн оплата Privat24</p>
-                                <p class="panel__pay-descr">
-                                    Щоб оплатити Online через Приват24 перейдіть за посиланням
-                                </p>
-                                <a href="javascript: void(0)" class="panel__pay-link">
-                                    <span>Оплата через privat24</span>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9 6.65032C9 6.65032 15.9383 6.10759 16.9154 7.08463C17.8925 8.06167 17.3496 15 17.3496 15M16.5 7.5L6.5 17.5"
-                                            stroke="#5A2D75" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="panel__pay-item">
-                            <div class="panel__pay-content">
-                                <p class="panel__pay-subtitle">Онлайн оплата на сайті</p>
-                                <p class="panel__pay-descr">
-                                    Увійдіть на Портал абонента «Мій кабінет»
-                                </p>
-                                <a href="javascript: void(0)" class="panel__pay-link">
-                                    <span>Оплата через кабінет</span>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9 6.65032C9 6.65032 15.9383 6.10759 16.9154 7.08463C17.8925 8.06167 17.3496 15 17.3496 15M16.5 7.5L6.5 17.5"
-                                            stroke="#5A2D75" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="panel__pay-item">
-                            <div class="panel__pay-content">
-                                <p class="panel__pay-subtitle">Оплата через термінали</p>
-                                <a href="javascript: void(0)" class="panel__pay-link">
-                                    <span>Перелік терміналів самообслуговування</span>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9 6.65032C9 6.65032 15.9383 6.10759 16.9154 7.08463C17.8925 8.06167 17.3496 15 17.3496 15M16.5 7.5L6.5 17.5"
-                                            stroke="#5A2D75" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="panel__routes">
-                    <a href="javascript: void(0)" class="panel__route">
-                        <div class="panel__route-content">
-                            <div class="panel__route-pic">
-                                <img src="./assets/imgs/p_1.svg" alt="Picture">
-                            </div>
-                            <h3 class="panel__route-title">Особистий кабінет</h3>
-                        </div>
-                        <span class="panel__route-deco">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.4998 7.75863C10.4998 7.75863 18.5946 7.12544 19.7345 8.26532C20.8744 9.4052 20.2411 17.4999 20.2411 17.4999M19.2498 8.74992L7.58317 20.4166"
-                                    stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </a>
-                    <a href="javascript: void(0)" class="panel__route">
-                        <div class="panel__route-content">
-                            <div class="panel__route-pic">
-                                <img src="./assets/imgs/p_2.svg" alt="Picture">
-                            </div>
-                            <h3 class="panel__route-title">Поповнити рахунок онлайн</h3>
-                        </div>
-                        <span class="panel__route-deco">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.4998 7.75863C10.4998 7.75863 18.5946 7.12544 19.7345 8.26532C20.8744 9.4052 20.2411 17.4999 20.2411 17.4999M19.2498 8.74992L7.58317 20.4166"
-                                    stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </section>
         <section class="news">
             <div class="container">
                 <div class="news__head">
-                    <h2 class="content-title">Новини та акції</h2>
+                    <h2 class="content-title">Актуальні акції для вас</h2>
                     <a href="javascript: void(0)" class="link-more">
                         <span>Дивитись всі</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -749,113 +568,6 @@
                             </svg>
                         </div>
                     </a>
-                </div>
-            </div>
-        </section>
-        <section class="faq">
-            <div class="container">
-                <h2 class="content-title">Нас часто запитують</h2>
-                <div class="faq__info">
-                    <ul class="faq-content">
-                        <li class="faq-box js-faq-box">
-                            <h3 class="faq-box__title">
-                                Як поповнити свій особовий рахунок?
-                            </h3>
-                            <div class="faq-box__text">
-                                <p>
-                                    Зверніться протягом 7 календарних днів до абонентського відділу у Вашому місті та
-                                    напишіть заяву на повернення коштів. При собі необхідно мати паспорт та код (можна
-                                    ксерокопію) людини, на яку оформлений особовий рахунок, та квитанцію, яку отримали
-                                    при поповненні. Будьте уважними та не втрачайте особисті кошти!
-                                </p>
-                            </div>
-                        </li>
-                        <li class="faq-box js-faq-box">
-                            <h3 class="faq-box__title">
-                                Як забезпечити енергонезалежний інтернет вдома?
-                            </h3>
-                            <div class="faq-box__text">
-                                <p>
-                                    Зверніться протягом 7 календарних днів до абонентського відділу у Вашому місті та
-                                    напишіть заяву на повернення коштів. При собі необхідно мати паспорт та код (можна
-                                    ксерокопію) людини, на яку оформлений особовий рахунок, та квитанцію, яку отримали
-                                    при поповненні. Будьте уважними та не втрачайте особисті кошти!
-                                </p>
-                            </div>
-                        </li>
-                        <li class="faq-box js-faq-box">
-                            <h3 class="faq-box__title">
-                                Потрібен ремонт техніки чи заправити картридж?
-                            </h3>
-                            <div class="faq-box__text">
-                                <p>
-                                    Зверніться протягом 7 календарних днів до абонентського відділу у Вашому місті та
-                                    напишіть заяву на повернення коштів. При собі необхідно мати паспорт та код (можна
-                                    ксерокопію) людини, на яку оформлений особовий рахунок, та квитанцію, яку отримали
-                                    при поповненні. Будьте уважними та не втрачайте особисті кошти!
-                                </p>
-                            </div>
-                        </li>
-                        <li class="faq-box js-faq-box">
-                            <h3 class="faq-box__title">
-                                Як дізнатись свою IP-адресу?
-                            </h3>
-                            <div class="faq-box__text">
-                                <p>
-                                    Зверніться протягом 7 календарних днів до абонентського відділу у Вашому місті та
-                                    напишіть заяву на повернення коштів. При собі необхідно мати паспорт та код (можна
-                                    ксерокопію) людини, на яку оформлений особовий рахунок, та квитанцію, яку отримали
-                                    при поповненні. Будьте уважними та не втрачайте особисті кошти!
-                                </p>
-                            </div>
-                        </li>
-                        <li class="faq-box js-faq-box">
-                            <h3 class="faq-box__title">
-                                6 порад, як покращити сигнал Wi-Fi вдома.
-                            </h3>
-                            <div class="faq-box__text">
-                                <p>
-                                    Зверніться протягом 7 календарних днів до абонентського відділу у Вашому місті та
-                                    напишіть заяву на повернення коштів. При собі необхідно мати паспорт та код (можна
-                                    ксерокопію) людини, на яку оформлений особовий рахунок, та квитанцію, яку отримали
-                                    при поповненні. Будьте уважними та не втрачайте особисті кошти!
-                                </p>
-                            </div>
-                        </li>
-                        <li class="faq-box js-faq-box">
-                            <h3 class="faq-box__title">
-                                Скільки коштує підключення?
-                            </h3>
-                            <div class="faq-box__text">
-                                <p>
-                                    Зверніться протягом 7 календарних днів до абонентського відділу у Вашому місті та
-                                    напишіть заяву на повернення коштів. При собі необхідно мати паспорт та код (можна
-                                    ксерокопію) людини, на яку оформлений особовий рахунок, та квитанцію, яку отримали
-                                    при поповненні. Будьте уважними та не втрачайте особисті кошти!
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="contact-box">
-                        <h2 class="content-title">Залишились запитання?</h2>
-                        <p class="contact-box__text">Ми готові на них відповісти</p>
-                        <ul class="contact-box__soc">
-                            <li>
-                                <a href="javascript: void(0)" target="_blank">
-                                    <img src="./assets/imgs/ico/ico-viber.svg" alt="Viber">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript: void(0)" target="_blank">
-                                    <img src="./assets/imgs/ico/ico-telegram.svg" alt="Telegram">
-                                </a>
-                            </li>
-                        </ul>
-                        <a href="tel:+380986644441" class="contact-box__tel">
-                            <img src="./assets/imgs/ico/ico-cal_d.svg" alt="Icon">
-                            (098) 664 44 41
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>

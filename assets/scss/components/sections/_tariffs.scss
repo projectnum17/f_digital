@@ -6,6 +6,12 @@
         max-width: var(--container-lg);
     }
 
+    &:not(:has(.tariffs__content)) {
+        .tariffs__handler {
+            margin-top: 0;
+        }
+    }
+
     &__content {
         position: relative;
         overflow: hidden;
@@ -93,6 +99,10 @@
         gap: rem(32px);
         max-width: rem(1608px);
         margin: rem(-200px) auto 0 auto;
+    }
+
+    .btn-nav {
+        margin-bottom: var(--section-indent);
     }
 
     &__slider {
