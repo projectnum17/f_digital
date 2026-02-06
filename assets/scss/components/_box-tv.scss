@@ -1,0 +1,176 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.tv-tariff {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: rem(24px);
+    padding: rem(55px) rem(39px);
+    border: 1px solid var(--simple_prpl);
+    box-shadow: 0px 12px 32px 0px #00000014;
+    background: var(--lght_grey);
+
+    &--popular {
+        position: relative;
+        background: linear-gradient(20.02deg, #fff9f0 24.51%, #eacefa 98.52%);
+        border: 4px solid var(--lght_prpl);
+    }
+
+    &__label {
+        font: 700 #{rem(16px)} / 90% var(--ff-base);
+        text-transform: uppercase;
+        position: absolute;
+        top: rem(24px);
+        color: var(--lght_prpl);
+    }
+
+    &__name {
+        font: 700 #{rem(32px)} / 90% var(--ff-base);
+        margin-bottom: rem(24px);
+    }
+
+    &__price {
+        font: 700 #{rem(18px)} / 90% var(--ff-base);
+        display: flex;
+        align-items: flex-end;
+        gap: rem(6px);
+        margin-bottom: rem(24px);
+
+        span {
+            font: 700 #{rem(52px)} / 90% var(--ff-base);
+            margin-bottom: rem(-5px);
+            color: var(--lght_prpl);
+        }
+    }
+
+    &__link {
+        font: 600 #{rem(16px)} / 100% var(--ff-base);
+        padding: rem(16px);
+        border-radius: rem(12px);
+        margin-bottom: rem(24px);
+        justify-content: center;
+        border: 2px solid var(--lght_prpl);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            background: var(--lght_prpl);
+            color: var(--lght_grey);
+        }
+    }
+
+    &__channels {
+        display: flex;
+        align-items: flex-start;
+        gap: rem(16px);
+        margin-bottom: rem(24px);
+
+        img {
+            margin-top: rem(6px);
+            width: rem(24px);
+            height: rem(24px);
+        }
+    }
+
+    &__channel {
+        display: flex;
+        flex-direction: column;
+        gap: rem(4px);
+
+        @include hover {
+            span svg {
+                transform: rotate(45deg);
+            }
+        }
+
+        p {
+            font: 700 #{rem(32px)} / 110% var(--ff-base);
+            letter-spacing: -1px;
+            margin: 0;
+            color: var(--lght_prpl);
+        }
+
+        span {
+            font: 600 #{rem(16px)} / 100% var(--ff-base);
+            position: relative;
+            width: max-content;
+            display: inline-flex;
+            align-items: center;
+            gap: rem(8px);
+            color: var(--lght_prpl);
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                width: calc(100% - 32px);
+                background-color: var(--lght_prpl);
+            }
+
+            svg {
+                width: rem(24px);
+                height: rem(24px);
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20px);
+        margin-bottom: rem(42px);
+    }
+
+    &__include,
+    &__noninclude {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: rem(8px);
+        font: 400 #{rem(16px)} / 110% var(--ff-base);
+
+        &::before {
+            content: '';
+            display: inline-flex;
+            flex-shrink: 0;
+            width: rem(24px);
+            height: rem(24px);
+        }
+    }
+
+    &__include {
+        &::before {
+            background: url('../imgs/ico/ico-check_f.svg') no-repeat center
+                center / cover;
+        }
+    }
+
+    &__noninclude {
+        color: rgba(37, 12, 52, 0.4);
+        &::before {
+            background: url('../imgs/ico/ico-non.svg') no-repeat center center /
+                cover;
+        }
+    }
+
+    &__cta {
+        font: 600 #{rem(18px)} / 100% var(--ff-base);
+        border-radius: rem(12px);
+        padding: rem(19px);
+        justify-content: center;
+        margin-top: auto;
+        border: 2px solid transparent;
+        color: var(--lght_grey);
+        background: var(--lght_prpl);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            background: transparent;
+            border-color: var(--lght_prpl);
+            color: var(--drk_prpl);
+        }
+    }
+}

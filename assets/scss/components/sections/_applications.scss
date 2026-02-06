@@ -106,4 +106,21 @@
             );
         }
     }
+
+    &__tariffs {
+        padding-top: rem(80px);
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: rem(24px);
+    }
+
+    &--simple {
+        margin-bottom: var(--section-indent);
+        .content-title {
+            margin-bottom: rem(32px);
+        }
+        .applications__content {
+            max-width: rem(750px);
+        }
+    }
 }

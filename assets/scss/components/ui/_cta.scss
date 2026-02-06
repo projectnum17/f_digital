@@ -1,0 +1,14 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.cta {
+    font: 600 #{rem(18px)} / 100% var(--ff-base);
+    padding: rem(21px) rem(32px);
+    border-radius: rem(12px);
+    color: var(--lght_grey);
+    background: var(--lght_prpl);
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include hover {
+        background: var(--drk_prpl);
+    }
+}
