@@ -1,0 +1,69 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.faq-box {
+    padding-block: rem(18px);
+    padding-inline: rem(20px) rem(24px);
+    border-radius: rem(16px);
+    cursor: pointer;
+    background: #f2f2f299;
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include hover {
+        background: #f2eef4;
+    }
+
+    &.is-open {
+        background: #f2eef4;
+
+        .faq-box__title {
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+
+        .faq-box__text {
+            grid-template-rows: 1fr;
+
+            p {
+                margin-top: rem(15px);
+            }
+        }
+    }
+
+    &__title {
+        font: 700 #{rem(20px)} / 100% var(--ff-base);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20px);
+
+        &::after {
+            content: '';
+            display: inline-flex;
+            flex-shrink: 0;
+            width: rem(24px);
+            height: rem(24px);
+            background: url('../imgs/ico/ico-plus.svg') no-repeat center
+                center / cover;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__text {
+        display: grid;
+        grid-template-rows: 0fr;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        p {
+            overflow: hidden;
+            font: 400 #{rem(16px)} / 140% var(--ff-base);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+}

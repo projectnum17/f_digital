@@ -1,0 +1,93 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.blog-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: rem(32px);
+    padding: rem(20px) rem(20px) rem(32px) rem(20px);
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid var(--simple_prpl);
+    @include hover {
+        .blog-box__pic img {
+            transform: scale(1.15);
+        }
+        .blog-box__deco {
+            svg {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__pic {
+        aspect-ratio: 424 / 308;
+        width: 100%;
+        overflow: hidden;
+        border-radius: rem(24px);
+        margin-bottom: rem(28px);
+        border: 1px solid var(--simple_prpl);
+
+        img {
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__content {
+        padding-inline: rem(20px);
+        margin-bottom: rem(23px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(12px);
+    }
+
+    &__date {
+        font: 400 #{rem(16px)} / 90% var(--ff-base);
+    }
+
+    &__title {
+        font: 700 #{rem(24px)} / 90% var(--ff-base);
+    }
+
+    &__desce {
+        font: 400 #{rem(16px)} / 140% var(--ff-base);
+    }
+
+    &__deco {
+        margin: auto 0 0 rem(20px);
+        display: flex;
+        align-items: center;
+        gap: rem(8px);
+        font: 600 #{rem(16px)} / 100% var(--ff-base);
+        position: relative;
+        width: max-content;
+        color: var(--lght_prpl);
+
+        span {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 100%;
+                height: 1px;
+                background: var(--lght_prpl);
+            }
+        }
+
+        svg {
+            display: inline-flex;
+            flex-shrink: 0;
+            width: rem(24px);
+            height: rem(24px);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+}

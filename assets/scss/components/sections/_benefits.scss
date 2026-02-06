@@ -1,0 +1,19 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.benefits {
+    padding-block: rem(60px) var(--section-indent);
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: rem(20px);
+        li {
+            display: flex;
+        }
+    }
+
+    .benefit-box {
+        max-width: 100%;
+    }
+}

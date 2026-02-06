@@ -1,3 +1,15 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {});
+import headerHandler from './mods/headerHandler.js';
+import videoAsyncHandler from './mods/videoAsyncHandler.js';
+import selectInit from './mods/selectInit.js';
+import tariffsSliderHandler from './mods/tariffsSliderHandler.js';
+import faqHandler from './mods/faqHandler.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    headerHandler();
+    videoAsyncHandler();
+    selectInit();
+    tariffsSliderHandler();
+    faqHandler();
+});

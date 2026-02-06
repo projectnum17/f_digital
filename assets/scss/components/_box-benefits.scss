@@ -1,0 +1,106 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.benefit-box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: rem(22px);
+    max-width: rem(272px);
+    border-radius: rem(24px);
+    border: 2px solid transparent;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 2px;
+        background: linear-gradient(
+            180deg,
+            rgba(159, 83, 204, 0.1) 0%,
+            #681c95 100%
+        );
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.35s cubic-bezier(0.768, 0.304, 0.496, 0.884);
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 2px;
+        background: var(--simple_prpl);
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 1;
+        pointer-events: none;
+        transition: opacity 0.35s cubic-bezier(0.768, 0.304, 0.496, 0.884);
+        z-index: 0;
+    }
+
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include hover {
+        &::before {
+            opacity: 1;
+        }
+
+        &::after {
+            opacity: 0;
+        }
+        .benefit-box__content {
+            transform: translateY(-4px);
+        }
+        .benefit-box__mask {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__mask {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(213, 200, 221, 0.6) 100%
+        );
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: rem(12px);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    }
+
+    &__pic {
+        width: rem(88px);
+        height: rem(88px);
+    }
+
+    &__title {
+        font: 700 #{rem(20px)} / 100% var(--ff-base);
+    }
+}

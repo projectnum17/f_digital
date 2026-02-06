@@ -1,0 +1,20 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.news {
+    margin-bottom: var(--section-indent);
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(40px);
+        margin-bottom: rem(32px);
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: rem(24px);
+    }
+}

@@ -1,0 +1,37 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.btn-nav {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(52px);
+    height: rem(52px);
+    border-radius: rem(8px);
+    border: 2px solid rgba(90, 45, 117, 0.2);
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include hover {
+        background: var(--lght_prpl);
+
+        svg {
+            color: var(--lght_grey);
+        }
+    }
+
+    &.swiper-button-lock {
+        display: none;
+    }
+
+    &.swiper-button-disabled {
+        pointer-events: none;
+        opacity: .5;
+    }
+
+    svg {
+        width: rem(40px);
+        height: rem(40px);
+        color: var(--drk_prpl);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    }
+}

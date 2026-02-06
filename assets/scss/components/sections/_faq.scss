@@ -1,0 +1,23 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.faq {
+    margin-bottom: var(--section-indent);
+
+    .content-title {
+        margin-bottom: rem(31px);
+    }
+
+    .contact-box {
+        min-height: rem(506px);
+        .content-title {
+            margin-bottom: rem(20px);
+        }
+    }
+
+    &__info {
+        align-items: flex-start;
+        display: flex;
+        gap: rem(24px);
+    }
+}

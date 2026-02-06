@@ -1,0 +1,113 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.connected {
+    position: relative;
+    color: var(--lght_grey);
+    &__content {
+        border-radius: rem(40px);
+        position: relative;
+        padding-block: rem(80px) rem(108px);
+        max-width: rem(1440px);
+        margin: 0 auto;
+        background: var(--accent_gradient);
+    }
+
+    .content-title {
+        text-align: center;
+        margin-bottom: rem(50px);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(40px) rem(60px);
+        counter-reset: faqCounter;
+    }
+
+    &__item {
+        counter-increment: faqCounter;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &:first-child {
+            grid-column: span 3;
+
+            .connected__text {
+                margin-bottom: rem(12px);
+            }
+        }
+
+        &::before {
+            font: 700 #{rem(24px)} / 100% var(--ff-base);
+            content: counter(faqCounter, decimal-leading-zero);
+            margin-bottom: rem(16px);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: rem(8px);
+            width: rem(48px);
+            height: rem(48px);
+            background: rgba(242, 242, 242, 0.08);
+        }
+    }
+
+    &__subtitle {
+        font: 700 #{rem(24px)} / 100% var(--ff-base);
+        margin-bottom: rem(12px);
+    }
+
+    &__text {
+        font: 400 #{rem(16px)} / 100% var(--ff-base);
+    }
+
+    &__phone {
+        margin-bottom: rem(24px);
+        display: flex;
+        align-items: center;
+        gap: rem(8px);
+        font: 700 #{rem(24px)} / 100% var(--ff-base);
+        @include hover {
+            img {
+                transform: rotate(10deg);
+            }
+        }
+
+        img {
+            width: rem(24px);
+            height: rem(24px);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__cta {
+        font: 600 #{rem(18px)} / 100% var(--ff-base);
+        border-radius: rem(12px);
+        padding: rem(21px) rem(32px);
+        background: var(--lght_grey);
+        color: var(--drk_prpl);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            color: var(--lght_grey);
+            background: var(--lght_prpl);
+        }
+    }
+
+    &__deco {
+        position: absolute;
+        top: 47%;
+        transform: translateY(-50%);
+
+        &.deco-l {
+            left: 0;
+        }
+        &.deco-r {
+            right: 0;
+        }
+    }
+}

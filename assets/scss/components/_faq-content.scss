@@ -1,0 +1,13 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.faq-content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16px);
+    padding: rem(32px) rem(39px);
+    max-width: rem(830px);
+    border-radius: rem(40px);
+    background: var(--white);
+    border: 1px solid var(--simple_prpl);
+}

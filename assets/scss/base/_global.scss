@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     color: var(--drk_prpl);
-    background: var(--lght_grey);
+    background: var(--black);
 
     &.is-locked {
         overflow: hidden;
@@ -22,6 +22,8 @@ body {
 
 main {
     flex: 1;
+    border-radius: 0 0 rem(60px) rem(60px);
+    background: var(--lght_grey);
 }
 
 footer {
@@ -43,4 +45,8 @@ a {
     padding-inline: var(--container-padding);
     width: 100%;
     margin: 0 auto;
+}
+
+section:last-child {
+    margin-bottom: var(--section-indent);
 }

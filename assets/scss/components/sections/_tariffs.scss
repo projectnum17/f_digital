@@ -1,0 +1,112 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.tariffs {
+    .container {
+        max-width: var(--container-lg);
+    }
+
+    &__content {
+        position: relative;
+        overflow: hidden;
+        padding-inline: var(--container-padding);
+        padding-block: var(--section-indent);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: rem(612px);
+        border-radius: rem(40px);
+        background: var(--accent_gradient);
+        color: var(--lght_grey);
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: rem(24px);
+        margin-bottom: rem(40px);
+        position: relative;
+        z-index: 2;
+    }
+
+    &__flow {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: rem(24px);
+        width: 100%;
+        justify-content: center;
+
+        .select-box {
+            position: relative;
+
+            &:first-child {
+                &::before {
+                    left: 0;
+                    transform: translateX(-120%);
+                    background: url('../imgs/ico/arrow-l.svg') no-repeat center
+                        center / cover;
+                }
+            }
+            &:last-child {
+                &::before {
+                    right: 0;
+                    transform: translateX(120%);
+                    background: url('../imgs/ico/arrow-r.svg') no-repeat center
+                        center / cover;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: rem(-30px);
+                width: rem(98px);
+                height: rem(20px);
+            }
+        }
+    }
+
+    &__subtitle {
+        font: 400 #{rem(18px)} / 90% var(--ff-base);
+    }
+
+    &__deco {
+        position: absolute;
+        pointer-events: none;
+        bottom: 0;
+
+        &.deco-l {
+            left: 0;
+        }
+        &.deco-r {
+            right: 0;
+        }
+    }
+
+    &__handler {
+        display: flex;
+        align-items: center;
+        gap: rem(32px);
+        max-width: rem(1608px);
+        margin: rem(-200px) auto 0 auto;
+    }
+
+    &__slider {
+        padding-bottom: var(--section-indent);
+        &-slide {
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .tariff-box {
+                height: rem(600px);
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
