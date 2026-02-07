@@ -1,0 +1,45 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.tab-controls {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8px);
+
+    &__btn {
+        align-items: center;
+        font: 600 #{rem(16px)} / 100% var(--ff-base);
+        padding: rem(8px) rem(16px);
+        gap: rem(8px);
+        border-radius: rem(12px);
+        color: var(--lght_prpl);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            background: #f2eef4;
+            svg {
+                transform: rotate(45deg);
+            }
+        }
+
+        &.is-active {
+            background: #f2eef4;
+            svg {
+                transform: rotate(45deg);
+            }
+        }
+
+        span {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        svg {
+            width: rem(24px);
+            height: rem(24px);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+}

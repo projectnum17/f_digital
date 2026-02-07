@@ -1,0 +1,125 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.services {
+    margin-bottom: var(--section-indent);
+
+    .breadcrumbs {
+        margin-block: rem(22px) rem(54px);
+    }
+
+    &__controls {
+        flex-shrink: 0;
+        position: sticky;
+        top: rem(20px);
+        max-width: rem(558px);
+        border-radius: rem(24px);
+        padding: rem(39px);
+        border: 1px solid var(--simple_prpl);
+        background: var(--white);
+    }
+
+    &__subtitle {
+        font: 700 #{rem(24px)} / 90% var(--ff-base);
+        margin-bottom: rem(8px);
+    }
+
+    &__title {
+        font: 700 #{rem(40px)} / 90% var(--ff-base);
+        margin-bottom: rem(20px);
+    }
+
+    &__pic {
+        margin-top: rem(16px);
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: rem(20px);
+    }
+
+    &__description {
+        max-width: rem(830px);
+        padding: rem(39px);
+        border-radius: rem(24px);
+        background: var(--white);
+        border: 1px solid var(--simple_prpl);
+
+        &-pic {
+            overflow: hidden;
+            aspect-ratio: 750 / 332;
+            width: 100%;
+            border-radius: rem(20px);
+            margin-bottom: rem(32px);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-info {
+            padding-inline: rem(20px);
+        }
+
+        &-title {
+            font: 700 #{rem(40px)} / 90% var(--ff-base);
+            margin-bottom: rem(24px);
+        }
+
+        &-subtitle {
+            font: 700 #{rem(24px)} / 90% var(--ff-base);
+            margin-bottom: rem(32px);
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: rem(20px);
+            margin-bottom: rem(48px);
+            counter-reset: listCounter;
+
+            li {
+                display: inline-flex;
+                align-items: flex-start;
+                gap: rem(16px);
+                counter-increment: listCounter;
+
+                &::before {
+                    content: counter(listCounter, decimal-leading-zero);
+                    font: 700 #{rem(24px)} / 100% var(--ff-base);
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: rem(8px);
+                    width: rem(48px);
+                    height: rem(48px);
+                    background: rgba(37, 12, 52, 0.08);
+                    color: var(--lght_prpl);
+                }
+
+                p {
+                    font: 400 #{rem(18px)} / 140% var(--ff-base);
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20px);
+    }
+}

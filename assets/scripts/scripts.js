@@ -7,6 +7,7 @@ import tariffsSliderHandler from './mods/tariffsSliderHandler.js';
 import faqHandler from './mods/faqHandler.js';
 import connectTarget from './mods/connectTarget.js';
 import payTabsHandler from './mods/payTabsHandler.js';
+import contentTabsHandler from './mods/contentTabsHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHandler();
@@ -16,4 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     faqHandler();
     connectTarget();
     payTabsHandler();
+    contentTabsHandler(
+        '.js-services-tabs',
+        '.js-services-tab',
+        '.js-services-content',
+    );
 });
