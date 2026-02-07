@@ -1,0 +1,28 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.filter-btn {
+    font: 700 #{rem(18px)} / 90% var(--ff-base);
+    display: flex;
+    align-items: center;
+    gap: rem(8px);
+    padding: rem(10px) rem(18px);
+    border-radius: rem(36px);
+    border: 2px solid #250c341f;
+    background: var(--lght_grey);
+    color: inherit;
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include hover {
+        border-color: var(--lght_prpl);
+        background: #d5c8dd33;
+    }
+    &.is-active {
+        background: var(--lght_prpl);
+        color: var(--lght_grey);
+    }
+    svg {
+        width: rem(24px);
+        height: rem(24px);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    }
+}
