@@ -64,6 +64,12 @@
         font: 400 #{rem(16px)} / 100% var(--ff-base);
     }
 
+    &__phones {
+        display: flex;
+        align-items: center;
+        gap: rem(20px);
+    }
+
     &__phone {
         margin-bottom: rem(24px);
         display: flex;
@@ -90,10 +96,12 @@
         font: 600 #{rem(18px)} / 100% var(--ff-base);
         border-radius: rem(12px);
         padding: rem(21px) rem(32px);
+        border: 1px solid transparent;
         background: var(--lght_grey);
         color: var(--drk_prpl);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         @include hover {
+            border-color: var(--lght_grey);
             color: var(--lght_grey);
             background: var(--lght_prpl);
         }
@@ -109,6 +117,20 @@
         }
         &.deco-r {
             right: 0;
+        }
+    }
+
+    &--video {
+        .connected__phone {
+            margin-bottom: 0;
+        }
+
+        .connected__phones {
+            margin-bottom: rem(24px);
+        }
+
+        .connected__item:first-child .connected__text {
+            margin-bottom: rem(24px);
         }
     }
 }

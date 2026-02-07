@@ -50,7 +50,3 @@ a {
 section:last-child {
     margin-bottom: var(--section-indent);
 }
-
-section:first-child:not(.intro) {
-    margin-top: rem(40px);
-}

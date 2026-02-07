@@ -6,6 +6,7 @@ import selectInit from './mods/selectInit.js';
 import tariffsSliderHandler from './mods/tariffsSliderHandler.js';
 import faqHandler from './mods/faqHandler.js';
 import connectTarget from './mods/connectTarget.js';
+import payTabsHandler from './mods/payTabsHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHandler();
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     tariffsSliderHandler();
     faqHandler();
     connectTarget();
+    payTabsHandler();
 });

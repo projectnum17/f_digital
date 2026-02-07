@@ -1,0 +1,35 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.advantages {
+    margin-bottom: var(--section-indent);
+    .content-title {
+        margin-bottom: rem(40px);
+    }
+
+    &__points {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: rem(24px);
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: rem(12px);
+            padding: rem(23px) rem(23px) rem(43px) rem(23px);
+            border-radius: rem(24px);
+            border: 2px solid var(--simple_prpl);
+
+            img {
+                width: rem(88px);
+                height: rem(88px);
+            }
+
+            p {
+                font: 700 #{rem(20px)} / 100% var(--ff-base);
+            }
+        }
+    }
+}
