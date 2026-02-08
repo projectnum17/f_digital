@@ -4,14 +4,53 @@
 .faq {
     margin-bottom: var(--section-indent);
 
+    &--extended {
+        .faq-content {
+            padding: rem(47px) rem(37px);
+        }
+
+        .contact-box {
+            min-height: auto;
+        }
+    }
+
+    .breadcrumbs {
+        margin-block: rem(22px) rem(54px);
+    }
+
     .content-title {
-        margin-bottom: rem(31px);
+        margin-bottom: rem(32px);
     }
 
     .contact-box {
         min-height: rem(506px);
         .content-title {
             margin-bottom: rem(20px);
+        }
+    }
+
+    &__filters {
+        display: flex;
+        align-items: center;
+        gap: rem(12px);
+        margin-bottom: rem(32px);
+    }
+
+    &__filter {
+        font: 700 #{rem(18px)} / 90% var(--ff-base);
+        padding: rem(12px) rem(18px);
+        border-radius: rem(36px);
+        border: 2px solid #250c341f;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            background: #d5c8dd33;
+            border-color: var(--lght_prpl);
+        }
+
+        &.is-active {
+            color: var(--lght_grey);
+            border-color: var(--lght_prpl);
+            background: var(--lght_prpl);
         }
     }
 

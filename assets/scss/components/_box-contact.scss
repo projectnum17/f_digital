@@ -7,6 +7,15 @@
     background: var(--white);
     border: 1px solid var(--simple_prpl);
 
+    &:has(.contact-box__pic) {
+        padding: rem(47px) rem(57px);
+    }
+
+    &__pic {
+        width: 100%;
+        margin-bottom: rem(32px);
+    }
+
     &__text {
         font: 400 #{rem(18px)} / 100% var(--ff-base);
         margin-bottom: rem(32px);
