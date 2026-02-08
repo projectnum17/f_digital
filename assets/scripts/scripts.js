@@ -24,4 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
         '.js-services-tab',
         '.js-services-content',
     );
+    contentTabsHandler(
+        '.js-clients-tabs',
+        '.js-clients-tab',
+        '.js-clients-content',
+    );
 });
