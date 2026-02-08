@@ -1,0 +1,18 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.form-contact {
+    &__radios {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20px);
+        margin-bottom: rem(32px);
+    }
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20px);
+        margin-bottom: rem(20px);
+    }
+}
