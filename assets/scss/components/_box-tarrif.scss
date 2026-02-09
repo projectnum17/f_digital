@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     border-radius: rem(24px);
-    padding: rem(55px) rem(39px);
+    // padding: rem(55px) rem(39px);
     max-width: rem(342px);
     border: 1px solid var(--simple_prpl);
     box-shadow: 0px 12px 32px 0px #00000014;
@@ -18,7 +18,10 @@
             color: var(--lght_grey);
         }
         .tariff-box__hidden {
-            // grid-template-rows: 1fr;
+            grid-template-rows: 1fr;
+        }
+        .tariff-box__bg {
+            background: var(--white);
         }
     }
 
@@ -61,6 +64,7 @@
     }
 
     &__label {
+        left: rem(39px);
         font: 700 #{rem(16px)} / 90% var(--ff-base);
         text-transform: uppercase;
         position: absolute;
@@ -99,7 +103,9 @@
     }
 
     &__head {
-        padding-bottom: rem(32px);
+        padding: rem(55px) rem(39px) rem(32px) rem(39px);
+        // padding: rem(55px) rem(39px);
+        // padding-bottom: rem(32px);
         margin-bottom: rem(24px);
         border-bottom: 1px solid rgba(37, 12, 52, 0.2);
     }
@@ -143,14 +149,27 @@
     }
 
     &__hidden {
-        // display: grid;
-        // grid-template-rows: 0fr;
-        // @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        display: grid;
+        grid-template-rows: 0fr;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    }
+
+    &__bg {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 0 rem(24px) rem(24px);
+        padding: rem(0px) rem(39px) rem(55px) rem(39px);
+        @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        // background: var(--white);
     }
 
     &__list {
         margin-bottom: rem(24px);
-        overflow: scroll;
+        // overflow: scroll;
         li {
             &:not(:last-of-type):not(.tariff-box__hidden) {
                 margin-bottom: rem(16px);

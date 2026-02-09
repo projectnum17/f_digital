@@ -2,12 +2,13 @@
 @use '../../base/mixins' as *;
 
 .pay {
+    margin-top: var(--section-top);
     --pic-h: #{rem(328px)};
     --top-pos: #{rem(-70px)};
     --pic-mb: #{rem(24px)};
 
     .breadcrumbs {
-        margin-block: rem(20px) rem(80px);
+        margin-block: rem(0px) rem(80px);
     }
 
     .content-title {

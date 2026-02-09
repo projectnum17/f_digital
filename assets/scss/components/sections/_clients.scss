@@ -2,9 +2,7 @@
 @use '../../base/mixins' as *;
 
 .clients {
-    .breadcrumbs {
-        margin-block: rem(20px) rem(52px);
-    }
+    margin-top: var(--section-top);
 
     &__controls {
         flex-shrink: 0;

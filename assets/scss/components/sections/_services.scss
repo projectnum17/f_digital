@@ -2,11 +2,8 @@
 @use '../../base/mixins' as *;
 
 .services {
+    margin-top: var(--section-top);
     margin-bottom: var(--section-indent);
-
-    .breadcrumbs {
-        margin-block: rem(22px) rem(54px);
-    }
 
     &__controls {
         flex-shrink: 0;

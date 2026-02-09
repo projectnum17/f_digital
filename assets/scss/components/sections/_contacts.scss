@@ -2,9 +2,7 @@
 @use '../../base/mixins' as *;
 
 .contacts {
-    .breadcrumbs {
-        margin-block: rem(20px) rem(52px);
-    }
+    margin-top: var(--section-top);
 
     .content-title {
         margin-bottom: rem(32px);

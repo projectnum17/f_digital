@@ -5,6 +5,7 @@
     display: flex;
     gap: rem(6px);
     align-items: center;
+    margin-block: 0 rem(52px);
 
     li:not(:last-child) {
         opacity: 0.4;

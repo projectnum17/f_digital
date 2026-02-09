@@ -6,9 +6,10 @@
     flex-direction: column;
     gap: rem(80px);
     margin-bottom: var(--section-indent);
+    margin-top: var(--section-top);
 
     .breadcrumbs {
-        margin-block: rem(20px) rem(104px);
+        margin-block: rem(0px) rem(104px);
     }
 
     .container {

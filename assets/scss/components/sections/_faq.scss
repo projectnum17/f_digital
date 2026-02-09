@@ -2,6 +2,7 @@
 @use '../../base/mixins' as *;
 
 .faq {
+    margin-top: var(--section-top);
     margin-bottom: var(--section-indent);
 
     &--extended {
@@ -12,10 +13,6 @@
         .contact-box {
             min-height: auto;
         }
-    }
-
-    .breadcrumbs {
-        margin-block: rem(22px) rem(54px);
     }
 
     .content-title {

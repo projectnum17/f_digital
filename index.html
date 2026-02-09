@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header js-header">
         <div class="header__top">
             <div class="container">
                 <div class="header__block">
@@ -94,13 +94,17 @@
                             <a href="javascript: void(0)">Про нас</a>
                         </li>
                         <li>
-                            <a href="javascript: void(0)">Додаткові послуги</a>
+                            <a href="javascript: void(0)" class="megamenu-trigger">
+                                Додаткові послуги
+                            </a>
                             <div class="megamenu">
-                                <ul class="megamenu__box">
-                                    <li>
-                                        <a href="javascript: void(0)">Довірений платіж</a>
-                                    </li>
-                                </ul>
+                                <div class="container">
+                                    <ul class="megamenu__box">
+                                        <li>
+                                            <a href="javascript: void(0)">Довірений платіж</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -288,7 +292,7 @@
                                             грн/міс
                                         </div>
                                         <div class="tariff-box__speed">
-                                            <img src="./assets/imgs/ico/ico-speed.png" alt="Icon">
+                                            <img src="./assets/imgs/gif/speed.gif" alt="Icon">
                                             <div class="tariff-box__info">
                                                 <p>Швидкість до</p>
                                                 <div class="row">
@@ -298,38 +302,31 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <ul class="tariff-box__list">
-                                        <li>
-                                            <p>
-                                                <span>Тільки Оптоволоконне підключення</span>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                Технологія підключення: <br> <span>XPON</span>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>Безкоштовне підключення</p>
-                                        </li>
-                                        <li class="tariff-box__hidden">
-                                            <ul class="tariff-box__group">
-                                                <li>
-                                                    <p>Необмежений об’єм трафіку</p>
-                                                </li>
-                                                <li>
-                                                    <p>Необмежений об’єм трафіку</p>
-                                                </li>
-                                                <li>
-                                                    <p>Необмежений об’єм трафіку</p>
-                                                </li>
-                                                <li>
-                                                    <p>Необмежений об’єм трафіку</p>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <div class="tariff-box__cta">Підключити</div>
+                                    <div class="tariff-box__bg">
+                                        <ul class="tariff-box__list">
+                                            <li>
+                                                <p>
+                                                    <span>Тільки Оптоволоконне підключення</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Технологія підключення: <br> <span>XPON</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Безкоштовне підключення</p>
+                                            </li>
+                                            <li class="tariff-box__hidden">
+                                                <ul class="tariff-box__group">
+                                                    <li>
+                                                        <p>Необмежений об’єм трафіку</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="tariff-box__cta">Підключити</div>
+                                    </div>
                                 </a>
                             </div>
                             <div class="tariffs__slider-slide swiper-slide">
@@ -341,7 +338,7 @@
                                             грн/міс
                                         </div>
                                         <div class="tariff-box__speed">
-                                            <img src="./assets/imgs/ico/ico-speed.png" alt="Icon">
+                                            <img src="./assets/imgs/gif/speed.gif" alt="Icon">
                                             <div class="tariff-box__info">
                                                 <p>Швидкість до</p>
                                                 <div class="row">
@@ -351,24 +348,26 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <ul class="tariff-box__list">
-                                        <li>
-                                            <p>
-                                                Технологія підключення: <br> <span>XPON</span>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>Безкоштовне підключення</p>
-                                        </li>
-                                        <li class="tariff-box__hidden">
-                                            <ul class="tariff-box__group">
-                                                <li>
-                                                    <p>Необмежений об’єм трафіку</p>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <div class="tariff-box__cta">Підключити</div>
+                                    <div class="tariff-box__bg">
+                                        <ul class="tariff-box__list">
+                                            <li>
+                                                <p>
+                                                    Технологія підключення: <br> <span>XPON</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Безкоштовне підключення</p>
+                                            </li>
+                                            <li class="tariff-box__hidden">
+                                                <ul class="tariff-box__group">
+                                                    <li>
+                                                        <p>Необмежений об’єм трафіку</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="tariff-box__cta">Підключити</div>
+                                    </div>
                                 </a>
                             </div>
                             <div class="tariffs__slider-slide swiper-slide">
@@ -381,7 +380,7 @@
                                             грн/міс
                                         </div>
                                         <div class="tariff-box__speed">
-                                            <img src="./assets/imgs/ico/ico-speed.png" alt="Icon">
+                                            <img src="./assets/imgs/gif/speed.gif" alt="Icon">
                                             <div class="tariff-box__info">
                                                 <p>Швидкість до</p>
                                                 <div class="row">
@@ -391,24 +390,26 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <ul class="tariff-box__list">
-                                        <li>
-                                            <p>
-                                                Технологія підключення: <br> <span>XPON</span>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>Безкоштовне підключення</p>
-                                        </li>
-                                        <li class="tariff-box__hidden">
-                                            <ul class="tariff-box__group">
-                                                <li>
-                                                    <p>Необмежений об’єм трафіку</p>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <div class="tariff-box__cta">Підключити</div>
+                                    <div class="tariff-box__bg">
+                                        <ul class="tariff-box__list">
+                                            <li>
+                                                <p>
+                                                    Технологія підключення: <br> <span>XPON</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Безкоштовне підключення</p>
+                                            </li>
+                                            <li class="tariff-box__hidden">
+                                                <ul class="tariff-box__group">
+                                                    <li>
+                                                        <p>Необмежений об’єм трафіку</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="tariff-box__cta">Підключити</div>
+                                    </div>
                                 </a>
                             </div>
                             <div class="tariffs__slider-slide swiper-slide">
@@ -420,7 +421,7 @@
                                             грн/міс
                                         </div>
                                         <div class="tariff-box__speed">
-                                            <img src="./assets/imgs/ico/ico-speed.png" alt="Icon">
+                                            <img src="./assets/imgs/gif/speed.gif" alt="Icon">
                                             <div class="tariff-box__info">
                                                 <p>Швидкість до</p>
                                                 <div class="row">
@@ -430,24 +431,26 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <ul class="tariff-box__list">
-                                        <li>
-                                            <p>
-                                                Технологія підключення: <br> <span>XPON</span>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>Безкоштовне підключення</p>
-                                        </li>
-                                        <li class="tariff-box__hidden">
-                                            <ul class="tariff-box__group">
-                                                <li>
-                                                    <p>Необмежений об’єм трафіку</p>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <div class="tariff-box__cta">Підключити</div>
+                                    <div class="tariff-box__bg">
+                                        <ul class="tariff-box__list">
+                                            <li>
+                                                <p>
+                                                    Технологія підключення: <br> <span>XPON</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Безкоштовне підключення</p>
+                                            </li>
+                                            <li class="tariff-box__hidden">
+                                                <ul class="tariff-box__group">
+                                                    <li>
+                                                        <p>Необмежений об’єм трафіку</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="tariff-box__cta">Підключити</div>
+                                    </div>
                                 </a>
                             </div>
                             <div class="tariffs__slider-slide swiper-slide">
@@ -459,7 +462,7 @@
                                             грн/міс
                                         </div>
                                         <div class="tariff-box__speed">
-                                            <img src="./assets/imgs/ico/ico-speed.png" alt="Icon">
+                                            <img src="./assets/imgs/gif/speed.gif" alt="Icon">
                                             <div class="tariff-box__info">
                                                 <p>Швидкість до</p>
                                                 <div class="row">
@@ -469,29 +472,31 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <ul class="tariff-box__list">
-                                        <li>
-                                            <p>
-                                                <span>Тільки Оптоволоконне підключення</span>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>
-                                                Технологія підключення: <br> <span>XPON</span>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>Безкоштовне підключення</p>
-                                        </li>
-                                        <li class="tariff-box__hidden">
-                                            <ul class="tariff-box__group">
-                                                <li>
-                                                    <p>Необмежений об’єм трафіку</p>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <div class="tariff-box__cta">Підключити</div>
+                                    <div class="tariff-box__bg">
+                                        <ul class="tariff-box__list">
+                                            <li>
+                                                <p>
+                                                    <span>Тільки Оптоволоконне підключення</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Технологія підключення: <br> <span>XPON</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Безкоштовне підключення</p>
+                                            </li>
+                                            <li class="tariff-box__hidden">
+                                                <ul class="tariff-box__group">
+                                                    <li>
+                                                        <p>Необмежений об’єм трафіку</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="tariff-box__cta">Підключити</div>
+                                    </div>
                                 </a>
                             </div>
                         </div>
