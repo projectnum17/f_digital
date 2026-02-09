@@ -38,7 +38,7 @@ const payTabsHandler = () => {
         }
     };
 
-    const firstKey = tabs[2].dataset.tab;
+    const firstKey = tabs[0].dataset.tab;
     hideAll();
     showContent(firstKey);
 

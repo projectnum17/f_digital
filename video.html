@@ -159,7 +159,7 @@
                     <h3 class="video__subtitle">
                         Від однієї камери до масштабних багатоканальних рішень
                     </h3>
-                    <a href="javascript: void(0)" class="cta">Замовити підключення</a>
+                    <a href="javascript: void(0)" class="cta js-modal-trigger">Замовити підключення</a>
                 </div>
                 <div class="video__pic">
                     <img src="./assets/imgs/pic_4.svg" alt="Picture">
@@ -242,7 +242,7 @@
                                     (095) 514 1741
                                 </a>
                             </div>
-                            <a href="javascript: void(0)" class="connected__cta">
+                            <a href="javascript: void(0)" class="connected__cta js-modal-trigger">
                                 Заявка на підключення
                             </a>
                         </li>
@@ -458,6 +458,74 @@
             <img src="./assets/imgs/ico/footer-deco.svg" alt="">
         </div>
     </footer>
+    <div class="request-form js-modal-form">
+        <div class="container">
+            <div class="request-form__content js-modal-content">
+                <button type="button" class="request-form__close js-modal-close">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 8L8.00108 23.9989M23.9989 24L8 8.00113" stroke="#5A2D75" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <h2 class="content-title">Заявка на підключення</h2>
+                <p class="request-form__text">
+                    Залиште Ваші контакти і менеджери Fobos Digital зв'яжуться з Вами найближчим часом
+                </p>
+                <div class="request-form__flow">
+                    <form>
+                        <div class="request-form__fields">
+                            <div class="form-field form-field--required">
+                                <label class="form-field__title" for="contactName">
+                                    Ваше ім’я
+                                </label>
+                                <input required class="form-field__box" type="text" name="contactName" id="contactName"
+                                    placeholder="Як до вас звертатись?">
+                            </div>
+                            <div class="form-field form-field--required">
+                                <label class="form-field__title" for="contactPhone">
+                                    Номер телефону
+                                </label>
+                                <input required class="form-field__box" type="text" name="contactPhone"
+                                    id="contactPhone" placeholder="+38 (XXX) XXX XX XX">
+                            </div>
+                            <div class="request-form__selects">
+                                <div class="select-box select-box--lght">
+                                    <select class="js-select" id="regionSelect" name="regionSelect">
+                                        <option value="" disabled selected>
+                                            Ваш регіон:
+                                        </option>
+                                        <option value="1">Полтавська область</option>
+                                        <option value="2">Полтавська область 2</option>
+                                        <option value="3">Полтавська область 3</option>
+                                    </select>
+                                </div>
+                                <div class="select-box select-box--lght">
+                                    <select class="js-select" id="areaSelect" name="areaSelect">
+                                        <option value="" disabled selected>
+                                            Населений пункт
+                                        </option>
+                                        <option value="1">м. Горішні плавні</option>
+                                        <option value="2">м. Горішні плавні 2</option>
+                                        <option value="3">м. Горішні плавні 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-consent">
+                                <input name="contactConsent" id="contactConsent" type="checkbox"
+                                    class="form-consent__box">
+                                <label for="contactConsent" class="form-consent__title">
+                                    Я прочитав(ла) і погоджуюсь з умовами "Політики конфіденційності"*
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            Залишити заявку
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

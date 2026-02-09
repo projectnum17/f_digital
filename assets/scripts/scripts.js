@@ -9,6 +9,7 @@ import connectTarget from './mods/connectTarget.js';
 import payTabsHandler from './mods/payTabsHandler.js';
 import contentTabsHandler from './mods/contentTabsHandler.js';
 import formHandler from './mods/formHandler.js';
+import formModalHandler from './mods/formModalHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHandler();
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     connectTarget();
     payTabsHandler();
     formHandler();
+    formModalHandler();
     contentTabsHandler(
         '.js-services-tabs',
         '.js-services-tab',
