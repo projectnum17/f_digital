@@ -6,6 +6,10 @@
     margin-top: var(--section-top);
     .breadcrumbs {
         margin-bottom: rem(104px);
+
+        @include media('mobile') {
+            margin-bottom: rem(20px);
+        }
     }
 
     .container {
@@ -17,6 +21,9 @@
 
     .content-title {
         margin-bottom: rem(24px);
+        @include media('mobile') {
+            margin-bottom: rem(12px);
+        }
     }
 
     &__content {
@@ -25,6 +32,22 @@
 
     &__pic {
         max-width: rem(586px);
+
+        &.desktop--visible {
+            display: none;
+            @include media('mobile') {
+                display: block;
+                max-width: rem(200px);
+                margin-bottom: rem(24px);
+            }
+        }
+
+        &.desktop--hidden {
+            @include media('desktop') {
+                display: none;
+            }
+        }
+
         img {
             width: 100%;
         }
@@ -33,6 +56,10 @@
     &__descr {
         font: 400 #{rem(18px)} / 140% var(--ff-base);
         margin-bottom: rem(40px);
+        @include media('mobile') {
+            font-size: rem(14px);
+            margin-bottom: rem(24px);
+        }
     }
 
     &__selects {
@@ -40,6 +67,11 @@
         align-items: center;
         gap: rem(24px);
         margin-bottom: rem(24px);
+        @include media('mobile') {
+            flex-direction: column;
+            gap: rem(8px);
+            margin-bottom: rem(12px);
+        }
     }
 
     &__target {
@@ -52,6 +84,11 @@
         padding: rem(3px);
         border: 1px solid #d9d8d9;
         background: var(--white);
+        @include media('mobile') {
+            max-width: 100%;
+            flex-direction: column;
+            border-radius: rem(12px);
+        }
     }
 
     &__btn {
@@ -66,6 +103,12 @@
         overflow: hidden;
         position: relative;
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            width: 100%;
+            font-size: rem(16px);
+            border-radius: rem(10px);
+            padding: rem(12px);
+        }
 
         &.is-active {
             &::after {
@@ -105,6 +148,11 @@
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+
+            @include media('mobile') {
+                width: rem(20px);
+                height: rem(20px);
+            }
         }
     }
 

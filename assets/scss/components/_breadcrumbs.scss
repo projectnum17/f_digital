@@ -23,11 +23,18 @@
                 align-items: center;
                 justify-content: center;
                 color: var(--lght_prpl);
+                @include media('mobile') {
+                    width: rem(12px);
+                    height: rem(12px);
+                }
             }
         }
     }
 
     a {
         font: 600 #{rem(16px)} / 100% var(--ff-base);
+        @include media('mobile') {
+            font-size: rem(13px);
+        }
     }
 }

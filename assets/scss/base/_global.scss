@@ -53,3 +53,9 @@ a {
 section:last-child {
     margin-bottom: var(--section-indent);
 }
+
+section.connected:last-child {
+    @include media('mobile') {
+        margin-bottom: 0;
+    }
+}

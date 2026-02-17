@@ -34,6 +34,7 @@
 
 @include media('mobile') {
     :root {
+        --section-top: #{rem(120px)};
         --section-indent: #{rem(60px)};
     }
 }

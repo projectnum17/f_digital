@@ -3,6 +3,8 @@ const connectTarget = () => {
 
     if (!btns.length) return;
 
+    btns[0].classList.add('is-active')
+
     btns.forEach((btn) => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
