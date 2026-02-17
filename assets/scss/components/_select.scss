@@ -4,6 +4,24 @@
 .select-box {
     max-width: rem(342px);
     width: 100%;
+    position: relative;
+
+    &:has(.select-styled.active) {
+        .select-box__arrow {
+            transform: translateY(-50%) rotate(180deg);
+            color: var(--drk_prpl);
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        right: rem(24px);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    }
+
     .select-hidden {
         position: absolute;
         opacity: 0;
@@ -37,23 +55,6 @@
         color: var(--lght_grey);
         border: 1px solid var(--lght_grey);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
-
-        &::after {
-            content: '';
-            width: rem(24px);
-            height: rem(24px);
-            display: inline-flex;
-            flex-shrink: 0;
-            position: absolute;
-            right: rem(23px);
-            top: 50%;
-            transform: translateY(-50%) rotate(0deg);
-            background: url('../imgs/ico/ico-drop.svg') no-repeat center center;
-            @include transitions(
-                0.3s,
-                cubic-bezier(0.768, 0.304, 0.496, 0.884)
-            );
-        }
 
         &:hover,
         &:focus {
@@ -93,9 +94,19 @@
         }
 
         &.active {
-            border-radius: rem(12px) rem(12px) 0 0;
-            border-color: var(--orange);
-            background: var(--lght_prpl);
+            background: var(--white);
+
+            .placeholder-text {
+                color: var(--drk_prpl);
+            }
+
+            .selected-text {
+                color: var(--drk_prpl);
+
+                &::before {
+                    background: var(--drk_prpl);
+                }
+            }
         }
 
         .selected-text {
@@ -116,8 +127,11 @@
                 height: rem(0px);
                 display: inline-flex;
                 flex-shrink: 0;
-                background: url('../imgs/ico/ico-location.svg') no-repeat center
+
+                -webkit-mask: url('../imgs/ico/ico-location.svg') no-repeat
                     center;
+                mask: url('../imgs/ico/ico-location.svg') no-repeat center;
+                background: var(--white);
                 @include transitions(
                     0.3s,
                     cubic-bezier(0.768, 0.304, 0.496, 0.884)
@@ -135,68 +149,52 @@
     }
 
     .select-options {
-        background: var(--lght_prpl);
-        border-radius: 0 0 rem(12px) rem(12px);
+        border-radius: rem(12px);
+        padding: rem(12px) rem(16px);
         z-index: 3;
         display: flex;
         flex-direction: column;
         position: absolute;
         right: 0;
         left: 0;
-        bottom: 0px;
+        bottom: rem(-8px);
         transform: translateY(100%);
-        max-height: 170px;
+        max-height: rem(224px);
         overflow: scroll;
         scrollbar-width: none;
         -ms-overflow-style: none;
         &::-webkit-scrollbar {
             display: none;
         }
-        border-right: 1px solid var(--orange);
-        border-left: 1px solid var(--orange);
-        border-bottom: 1px solid var(--orange);
-        // background: #f2f2f21a;
+        border: 1px solid #d9d8d9;
+        background: var(--white);
+        box-shadow: 0px 8px 12px 0px #0000000f;
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         li {
-            padding: rem(15px) rem(12px);
-            font: 400 #{rem(14px)} / 150% var(--ff-base);
+            border-radius: rem(8px);
+            padding: rem(13px) rem(12px);
+            font: 600 #{rem(16px)} / 90% var(--ff-base);
             display: inline-flex;
             align-items: center;
             justify-content: space-between;
             gap: rem(12px);
+            color: var(--drk_prpl);
             @include transitions(
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
-
-            &::after {
-                content: '';
-                width: rem(16px);
-                height: rem(16px);
-                background: url('../imgs/ico/ico-check_wht.svg') no-repeat
-                    center center / contain;
-                opacity: 0;
-                @include transitions(
-                    0.3s,
-                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
-                );
-            }
-
-            &:not(:last-child) {
-                border-bottom: 1px solid var(--orange);
-            }
 
             &:first-child {
                 display: none;
             }
 
             &:hover {
-                color: var(--simple_prpl);
+                opacity: 0.7;
             }
 
             &.is-selected {
-                color: var(--simple_prpl);
+                background: #f2eef4;
 
                 &::after {
                     opacity: 1;
@@ -235,38 +233,14 @@
                     center / cover;
             }
 
-            &.active {
-                background-color: var(--simple_prpl);
-                border-color: var(--lght_prpl);
-            }
-
             .selected-text {
                 color: var(--drk_prpl);
 
                 &::before {
-                    background: url('../imgs/ico/ico-location_d.svg') no-repeat
-                        center center;
-                }
-            }
-        }
-
-        .select-options {
-            background: var(--simple_prpl);
-            border-color: var(--drk_prpl);
-
-            li {
-                &.is-selected {
-                    color: var(--drk_prpl);
-                }
-                @include hover {
-                    color: var(--drk_prpl);
-                }
-                &:not(:last-child) {
-                    border-bottom: 1px solid var(--drk_prpl);
-                }
-                &::after {
-                    background: url('../imgs/ico/ico-check.svg') no-repeat
-                        center center / contain;
+                    -webkit-mask: url('../imgs/ico/ico-location.svg') no-repeat
+                        center;
+                    mask: url('../imgs/ico/ico-location.svg') no-repeat center;
+                    background: var(--drk_prpl);
                 }
             }
         }

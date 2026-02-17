@@ -2,14 +2,16 @@
 @use '../../base/mixins' as *;
 
 .intro {
-    margin-top: rem(50px);
+    // margin-top: rem(50px);
     position: relative;
     overflow: hidden;
-    padding-block: rem(88px);
-    min-height: rem(712px);
+    padding-block: rem(120px) rem(88px);
+    // min-height: rem(712px);
+    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     color: var(--lght_grey);
 
     &::after {
@@ -40,7 +42,7 @@
     &__heading {
         display: flex;
         flex-direction: column;
-        gap: rem(40px);
+        gap: rem(75px);
         max-width: rem(700px);
         margin: 0 auto rem(60px);
         text-align: center;
@@ -52,6 +54,7 @@
         span {
             font-size: rem(188px);
             font-style: italic;
+            margin-left: rem(-15px);
         }
     }
 
@@ -71,7 +74,6 @@
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         @include hover {
             background-color: var(--orange);
-            color: initial;
         }
     }
 

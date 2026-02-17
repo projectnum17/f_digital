@@ -9,6 +9,6 @@
 }
 
 
-@include font-face('Suisse', 'ff_base', 400, normal);
-@include font-face('Helvetica', 'ff_sec_400', 400, normal);
-@include font-face('Helvetica', 'ff_sec_500', 500, normal);
+@include font-face('Proxima', 'ff_base_400', 400, normal);
+@include font-face('Proxima', 'ff_base_600', 600, normal);
+@include font-face('Proxima', 'ff_base_700', 700, normal);

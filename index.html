@@ -65,6 +65,35 @@
                     <div class="header__location">
                         <img src="./assets/imgs/ico/ico-pin.svg" alt="Icon">
                         <p>м. Горішні плавні</p>
+                        <div class="location-box js-location-box">
+                            <div class="location-box__inner">
+                                <p class="location-box__text">Ви знаходитесь у місті</p>
+                                <p class="location-box__title">Горішні плавні?</p>
+                                <div class="location-box__controls js-loc-controls">
+                                    <div class="location-box__btns">
+                                        <button type="button" class="location-box__btn location-change js-change-loc">
+                                            Змінити
+                                        </button>
+                                        <button type="button" class="location-box__btn location-submit js-submit-loc">
+                                            Так
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="location-box__map js-loc-map">
+                                    <div class="location-box__cities">
+                                        <button type="button" class="location-box__city js-city-loc">
+                                            м. Горішні плавні
+                                        </button>
+                                        <button type="button" class="location-box__city js-city-loc">
+                                            м. Світловодськ
+                                        </button>
+                                        <button type="button" class="location-box__city js-city-loc">
+                                            м. Решетилівка
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="header__phones">
                         <img src="./assets/imgs/ico/ico-call.svg" alt="Call">
@@ -311,7 +340,15 @@
                                 <option value="1">Полтавська область</option>
                                 <option value="2">Полтавська область 2</option>
                                 <option value="3">Полтавська область 3</option>
+                                <option value="3">Полтавська область 3</option>
+                                <option value="3">Полтавська область 3</option>
+                                <option value="3">Полтавська область 3</option>
                             </select>
+                            <svg class="select-box__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#F2F2F2"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
                         <div class="select-box">
                             <select class="js-select" id="areaSelect" name="areaSelect">
@@ -322,6 +359,11 @@
                                 <option value="2">м. Горішні плавні 2</option>
                                 <option value="3">м. Горішні плавні 3</option>
                             </select>
+                            <svg class="select-box__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#F2F2F2"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
                     </div>
                     <div class="tariffs__deco deco-l">
@@ -360,31 +402,25 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tariff-box__bg">
-                                        <ul class="tariff-box__list">
-                                            <li>
-                                                <p>
-                                                    <span>Тільки Оптоволоконне підключення</span>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    Технологія підключення: <br> <span>XPON</span>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>Безкоштовне підключення</p>
-                                            </li>
-                                            <li class="tariff-box__hidden">
-                                                <ul class="tariff-box__group">
-                                                    <li>
-                                                        <p>Необмежений об’єм трафіку</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <div class="tariff-box__cta">Підключити</div>
-                                    </div>
+                                    <ul class="tariff-box__list">
+                                        <li>
+                                            <p>
+                                                <span>Тільки Оптоволоконне підключення</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Технологія підключення: <br> <span>XPON</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>Безкоштовне підключення</p>
+                                        </li>
+                                        <li>
+                                            <p>Необмежений об’єм трафіку</p>
+                                        </li>
+                                    </ul>
+                                    <div class="tariff-box__cta">Підключити</div>
                                 </a>
                             </div>
                             <div class="tariffs__slider-slide swiper-slide">
@@ -406,26 +442,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tariff-box__bg">
-                                        <ul class="tariff-box__list">
-                                            <li>
-                                                <p>
-                                                    Технологія підключення: <br> <span>XPON</span>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>Безкоштовне підключення</p>
-                                            </li>
-                                            <li class="tariff-box__hidden">
-                                                <ul class="tariff-box__group">
-                                                    <li>
-                                                        <p>Необмежений об’єм трафіку</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <div class="tariff-box__cta">Підключити</div>
-                                    </div>
+                                    <ul class="tariff-box__list">
+                                        <li>
+                                            <p>
+                                                Технологія підключення: <br> <span>XPON</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>Безкоштовне підключення</p>
+                                        </li>
+                                        <li>
+                                            <p>Необмежений об’єм трафіку</p>
+                                        </li>
+                                    </ul>
+                                    <div class="tariff-box__cta">Підключити</div>
                                 </a>
                             </div>
                             <div class="tariffs__slider-slide swiper-slide">
@@ -448,26 +478,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tariff-box__bg">
-                                        <ul class="tariff-box__list">
-                                            <li>
-                                                <p>
-                                                    Технологія підключення: <br> <span>XPON</span>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>Безкоштовне підключення</p>
-                                            </li>
-                                            <li class="tariff-box__hidden">
-                                                <ul class="tariff-box__group">
-                                                    <li>
-                                                        <p>Необмежений об’єм трафіку</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <div class="tariff-box__cta">Підключити</div>
-                                    </div>
+                                    <ul class="tariff-box__list">
+                                        <li>
+                                            <p>
+                                                Технологія підключення: <br> <span>XPON</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>Безкоштовне підключення</p>
+                                        </li>
+                                        <li>
+                                            <p>Необмежений об’єм трафіку</p>
+                                        </li>
+                                    </ul>
+                                    <div class="tariff-box__cta">Підключити</div>
                                 </a>
                             </div>
                             <div class="tariffs__slider-slide swiper-slide">
@@ -489,26 +513,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tariff-box__bg">
-                                        <ul class="tariff-box__list">
-                                            <li>
-                                                <p>
-                                                    Технологія підключення: <br> <span>XPON</span>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>Безкоштовне підключення</p>
-                                            </li>
-                                            <li class="tariff-box__hidden">
-                                                <ul class="tariff-box__group">
-                                                    <li>
-                                                        <p>Необмежений об’єм трафіку</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <div class="tariff-box__cta">Підключити</div>
-                                    </div>
+                                    <ul class="tariff-box__list">
+                                        <li>
+                                            <p>
+                                                Технологія підключення: <br> <span>XPON</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>Безкоштовне підключення</p>
+                                        </li>
+                                        <li>
+                                            <p>Необмежений об’єм трафіку</p>
+                                        </li>
+                                    </ul>
+                                    <div class="tariff-box__cta">Підключити</div>
                                 </a>
                             </div>
                             <div class="tariffs__slider-slide swiper-slide">
@@ -530,31 +548,25 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tariff-box__bg">
-                                        <ul class="tariff-box__list">
-                                            <li>
-                                                <p>
-                                                    <span>Тільки Оптоволоконне підключення</span>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    Технологія підключення: <br> <span>XPON</span>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>Безкоштовне підключення</p>
-                                            </li>
-                                            <li class="tariff-box__hidden">
-                                                <ul class="tariff-box__group">
-                                                    <li>
-                                                        <p>Необмежений об’єм трафіку</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <div class="tariff-box__cta">Підключити</div>
-                                    </div>
+                                    <ul class="tariff-box__list">
+                                        <li>
+                                            <p>
+                                                <span>Тільки Оптоволоконне підключення</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Технологія підключення: <br> <span>XPON</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>Безкоштовне підключення</p>
+                                        </li>
+                                        <li>
+                                            <p>Необмежений об’єм трафіку</p>
+                                        </li>
+                                    </ul>
+                                    <div class="tariff-box__cta">Підключити</div>
                                 </a>
                             </div>
                         </div>
@@ -1192,7 +1204,7 @@
                             </div>
                             <div class="request-form__selects">
                                 <div class="select-box select-box--lght">
-                                    <select class="js-select" id="regionSelect" name="regionSelect">
+                                    <select class="js-select" id="regionSelectModal" name="regionSelectModal">
                                         <option value="" disabled selected>
                                             Ваш регіон:
                                         </option>
@@ -1202,7 +1214,7 @@
                                     </select>
                                 </div>
                                 <div class="select-box select-box--lght">
-                                    <select class="js-select" id="areaSelect" name="areaSelect">
+                                    <select class="js-select" id="areaSelectModal" name="areaSelectModal">
                                         <option value="" disabled selected>
                                             Населений пункт
                                         </option>

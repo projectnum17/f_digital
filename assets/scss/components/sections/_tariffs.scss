@@ -109,11 +109,11 @@
         padding-bottom: var(--section-indent);
         &-slide {
             height: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
             .tariff-box {
-                height: rem(600px);
+                // height: rem(600px);
                 width: 100%;
                 max-width: 100%;
             }

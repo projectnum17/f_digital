@@ -44,9 +44,77 @@ const headerHandler = () => {
         handleScroll();
         window.addEventListener('scroll', handleScroll);
     };
+    const locationBox = () => {
+        const locationBox = document.querySelector('.js-location-box');
+        if (!locationBox) return;
+
+        const headerLocationText = document.querySelector(
+            '.header__location p',
+        );
+        if (!headerLocationText) return;
+
+        const title = locationBox.querySelector('.location-box__title');
+        if (!title) return;
+
+        const controls = locationBox.querySelector('.js-loc-controls');
+        const changeLocation = controls.querySelector('.js-change-loc');
+        const submitLocation = controls.querySelector('.js-submit-loc');
+        if (!changeLocation || !submitLocation) return;
+
+        const map = locationBox.querySelector('.js-loc-map');
+        if (!map) return;
+
+        const cities = map.querySelectorAll('.js-city-loc');
+        if (!cities.length) return;
+
+        const savedCity = localStorage.getItem('selectedCity');
+
+        if (savedCity) {
+            headerLocationText.textContent = savedCity;
+            title.textContent = savedCity.replace('м. ', '') + '?';
+        } else {
+            setTimeout(() => {
+                locationBox.classList.add('is-show');
+            }, 400);
+        }
+
+        submitLocation.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            const currentCity = headerLocationText.textContent.trim();
+
+            localStorage.setItem('selectedCity', currentCity);
+
+            locationBox.classList.remove('is-show');
+        });
+
+        changeLocation.addEventListener('click', (e) => {
+            e.stopPropagation();
+            map.classList.add('is-show');
+            controls.classList.add('is-hide');
+        });
+
+        cities.forEach((city) => {
+            city.addEventListener('click', (e) => {
+                e.stopPropagation();
+
+                const cityText = city.textContent.trim();
+
+                headerLocationText.textContent = cityText;
+                title.textContent = cityText.replace('м. ', '') + '?';
+
+                localStorage.setItem('selectedCity', cityText);
+
+                map.classList.remove('is-show');
+                controls.classList.remove('is-hide');
+                locationBox.classList.remove('is-show');
+            });
+        });
+    };
 
     headerScrolledHandler();
     targetBtnsHandler();
+    locationBox();
 };
 
 export default headerHandler;

@@ -2,6 +2,7 @@ const tariffsSliderHandler = () => {
     if (typeof Swiper === 'undefined') return;
 
     const sliderEls = document.querySelector('.js-tariffs-slider');
+    if (!sliderEls) return;
 
     new Swiper(sliderEls, {
         slidesPerView: 4,

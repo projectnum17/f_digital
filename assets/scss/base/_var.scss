@@ -2,8 +2,7 @@
 @use 'mixins' as *;
 
 :root {
-    --ff-base: 'Suisse', sans-serif;
-    --ff-sec: 'Helvetica', sans-serif;
+    --ff-base: 'Proxima', sans-serif;
 
     --container-lg: #{rem(1840px)};
     --container-md: #{rem(1460px)};

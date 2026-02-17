@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
     border-radius: rem(24px);
-    // padding: rem(55px) rem(39px);
+    height: 100%;
+    padding: rem(55px) rem(39px);
     max-width: rem(342px);
     border: 1px solid var(--simple_prpl);
     box-shadow: 0px 12px 32px 0px #00000014;
@@ -13,6 +14,11 @@
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
     @include hover {
+        .tariff-box__info {
+            .row span {
+                color: var(--orange);
+            }
+        }
         .tariff-box__cta {
             background: var(--lght_prpl);
             color: var(--lght_grey);
@@ -103,9 +109,7 @@
     }
 
     &__head {
-        padding: rem(55px) rem(39px) rem(32px) rem(39px);
-        // padding: rem(55px) rem(39px);
-        // padding-bottom: rem(32px);
+        padding-bottom: rem(23px);
         margin-bottom: rem(24px);
         border-bottom: 1px solid rgba(37, 12, 52, 0.2);
     }
@@ -128,6 +132,7 @@
             span {
                 font: 700 #{rem(32px)} / 90% var(--ff-base);
                 color: var(--lght_prpl);
+                @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
             }
 
             p {
@@ -160,16 +165,11 @@
         flex-direction: column;
         border-radius: 0 0 rem(24px) rem(24px);
         padding: rem(0px) rem(39px) rem(55px) rem(39px);
-        @include transitions(
-                0.5s,
-                cubic-bezier(0.768, 0.304, 0.496, 0.884)
-            );
-        // background: var(--white);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     }
 
     &__list {
         margin-bottom: rem(24px);
-        // overflow: scroll;
         li {
             &:not(:last-of-type):not(.tariff-box__hidden) {
                 margin-bottom: rem(16px);

@@ -12,10 +12,11 @@
     border: 2px solid rgba(90, 45, 117, 0.2);
     @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     @include hover {
-        background: var(--lght_prpl);
+        background: #f2eef4;
+        border-color: #5a2d75;
 
         svg {
-            color: var(--lght_grey);
+            color: #5a2d75;
         }
     }
 
@@ -25,7 +26,7 @@
 
     &.swiper-button-disabled {
         pointer-events: none;
-        opacity: .5;
+        opacity: 0.5;
     }
 
     svg {

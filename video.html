@@ -65,6 +65,35 @@
                     <div class="header__location">
                         <img src="./assets/imgs/ico/ico-pin.svg" alt="Icon">
                         <p>м. Горішні плавні</p>
+                        <div class="location-box js-location-box">
+                            <div class="location-box__inner">
+                                <p class="location-box__text">Ви знаходитесь у місті</p>
+                                <p class="location-box__title">Горішні плавні?</p>
+                                <div class="location-box__controls js-loc-controls">
+                                    <div class="location-box__btns">
+                                        <button type="button" class="location-box__btn location-change js-change-loc">
+                                            Змінити
+                                        </button>
+                                        <button type="button" class="location-box__btn location-submit js-submit-loc">
+                                            Так
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="location-box__map js-loc-map">
+                                    <div class="location-box__cities">
+                                        <button type="button" class="location-box__city js-city-loc">
+                                            м. Горішні плавні
+                                        </button>
+                                        <button type="button" class="location-box__city js-city-loc">
+                                            м. Світловодськ
+                                        </button>
+                                        <button type="button" class="location-box__city js-city-loc">
+                                            м. Решетилівка
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="header__phones">
                         <img src="./assets/imgs/ico/ico-call.svg" alt="Call">
@@ -552,7 +581,7 @@
                             </div>
                             <div class="request-form__selects">
                                 <div class="select-box select-box--lght">
-                                    <select class="js-select" id="regionSelect" name="regionSelect">
+                                    <select class="js-select" id="regionSelectModal" name="regionSelectModal">
                                         <option value="" disabled selected>
                                             Ваш регіон:
                                         </option>
@@ -562,7 +591,7 @@
                                     </select>
                                 </div>
                                 <div class="select-box select-box--lght">
-                                    <select class="js-select" id="areaSelect" name="areaSelect">
+                                    <select class="js-select" id="areaSelectModal" name="areaSelectModal">
                                         <option value="" disabled selected>
                                             Населений пункт
                                         </option>
