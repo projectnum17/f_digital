@@ -4,6 +4,15 @@
 .applications {
     margin-bottom: rem(80px);
     margin-top: var(--section-top);
+
+    &:has(.applications__tariffs) {
+        .container:last-child {
+            @include media('desktop') {
+                padding: 0;
+            }
+        }
+    }
+
     .breadcrumbs {
         margin-bottom: rem(104px);
 
@@ -161,15 +170,52 @@
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: rem(24px);
+
+        @include media('desktop') {
+            display: flex;
+            overflow: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding-inline: var(--container-padding);
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            padding-bottom: var(--section-indent);
+        }
+        @include media('mobile') {
+            gap: rem(12px);
+        }
+
+        .tv-tariff {
+            @include media('desktop') {
+                max-width: rem(450px);
+                flex-shrink: 0;
+                scroll-snap-align: center;
+            }
+            @include media('mobile') {
+                max-width: rem(290px);
+            }
+        }
     }
 
     &--simple {
         margin-bottom: var(--section-indent);
+        @include media('desktop') {
+            margin-bottom: 0;
+        }
         .content-title {
             margin-bottom: rem(32px);
+            @include media('mobile') {
+                margin-bottom: rem(24px);
+            }
         }
         .applications__content {
             max-width: rem(750px);
+            @include media('mobile') {
+                max-width: 100%;
+            }
         }
     }
 }

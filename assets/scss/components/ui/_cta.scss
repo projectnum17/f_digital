@@ -11,4 +11,9 @@
     @include hover {
         background: var(--drk_prpl);
     }
+
+    @include media('mobile') {
+        font-size: rem(16px);
+        padding: rem(15px);
+    }
 }
