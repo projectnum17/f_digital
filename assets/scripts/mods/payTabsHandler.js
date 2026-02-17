@@ -31,7 +31,14 @@ const payTabsHandler = () => {
             `.js-pay-tab[data-tab="${key}"]`,
         );
 
-        if (activeTab) activeTab.classList.add('is-active');
+        if (activeTab) {
+            activeTab.classList.add('is-active');
+            activeTab.scrollIntoView({
+                behavior: 'smooth',
+                inline: 'center',
+                block: 'nearest',
+            });
+        }
 
         if (contactBlock) {
             contactBlock.classList.toggle('tab-hide', key === 'terminals');
