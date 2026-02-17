@@ -44,6 +44,7 @@ const headerHandler = () => {
         handleScroll();
         window.addEventListener('scroll', handleScroll);
     };
+
     const locationBox = () => {
         const locationBox = document.querySelector('.js-location-box');
         if (!locationBox) return;
@@ -112,6 +113,16 @@ const headerHandler = () => {
         });
     };
 
+    const phonesHandler = () => {
+        const phonesBox = document.querySelector('.js-header-phones');
+        if (!phonesBox) return;
+
+        phonesBox.addEventListener('click', () => {
+            phonesBox.classList.toggle('is-active');
+        });
+    };
+
+    phonesHandler();
     headerScrolledHandler();
     targetBtnsHandler();
     locationBox();

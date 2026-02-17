@@ -95,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="header__phones">
+                    <div class="header__phones js-header-phones">
                         <img src="./assets/imgs/ico/ico-call.svg" alt="Call">
                         <a href="tel:+380986644441" class="header__phone">(098) 664 44 41</a>
                         <div class="header__phones-box">
@@ -110,6 +110,9 @@
                         </div>
                     </div>
                 </div>
+                <button type="button" class="header__burger js-menu-trigger">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
         <div class="header__bot">
@@ -211,7 +214,7 @@
                                 stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M2 9H22" stroke="#5A2D75" stroke-width="1.5" stroke-linejoin="round" />
                         </svg>
-                        Оплата
+                        <span>Оплата</span>
                     </a>
                     <a href="javascript: void(0)" class="header__control">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,14 +224,14 @@
                             <path d="M19 20.5C19 16.634 15.866 13.5 12 13.5C8.13401 13.5 5 16.634 5 20.5"
                                 stroke="#5A2D75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        Вхід до кабінету
+                        <span>Вхід до кабінету</span>
                     </a>
                 </div>
             </div>
         </div>
     </header>
     <main class="main">
-        <section class="intro">
+        <section class="intro" style="display: none !important;">
             <div class="container">
                 <div class="intro__content">
                     <div class="intro__heading">
@@ -262,7 +265,7 @@
                 <p>Your browser does not support the video tag.</p>
             </video>
         </section>
-        <section class="benefits">
+        <section class="benefits" style="display: none !important;">
             <div class="container">
                 <ul class="benefits__list">
                     <li>
@@ -322,7 +325,7 @@
                 </ul>
             </div>
         </section>
-        <section class="tariffs">
+        <section class="tariffs" style="display: none !important;">
             <div class="container">
                 <div class="tariffs__content">
                     <div class="tariffs__head">
@@ -581,7 +584,7 @@
                 </div>
             </div>
         </section>
-        <section class="choosing">
+        <section class="choosing" style="display: none !important;">
             <div class="container">
                 <div class="choosing__content">
                     <p class="content-title">Чому обирають </p>
@@ -652,7 +655,7 @@
                 </div>
             </div>
         </section>
-        <section class="panel">
+        <section class="panel" style="display: none !important;">
             <div class="container">
                 <div class="panel__pay">
                     <h2 class="content-title">Доступні варіанти поповнення рахунку</h2>
@@ -746,7 +749,7 @@
                 </div>
             </div>
         </section>
-        <section class="news">
+        <section class="news" style="display: none !important;">
             <div class="container">
                 <div class="news__head">
                     <h2 class="content-title">Новини та акції</h2>
@@ -829,7 +832,7 @@
                 </div>
             </div>
         </section>
-        <section class="faq">
+        <section class="faq" style="display: none !important;">
             <div class="container">
                 <h2 class="content-title">Нас часто запитують</h2>
                 <div class="faq__info">
@@ -936,7 +939,7 @@
                 </div>
             </div>
         </section>
-        <section class="connected">
+        <section class="connected" style="display: none !important;">
             <div class="container">
                 <div class="connected__content">
                     <h2 class="content-title">Підключайтесь у кілька кроків</h2>
