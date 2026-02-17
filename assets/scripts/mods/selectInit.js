@@ -40,6 +40,7 @@ const selectInit = () => {
         });
 
         const updateSelection = (value, text) => {
+            if (selectEl.value === value && selectedSpan.textContent === text) return;
             selectedSpan.textContent = text;
 
             if (value === '' || value === null) {
