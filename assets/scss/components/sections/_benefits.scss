@@ -3,13 +3,34 @@
 
 .benefits {
     padding-block: rem(60px) var(--section-indent);
+    @include media('mobile') {
+        padding-block: var(--section-indent);
+    }
 
     &__list {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: rem(20px);
+
+        @include media('desktop') {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @include media('mobile') {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: rem(12px);
+        }
+
         li {
             display: flex;
+            &:last-child {
+                @include media('desktop') {
+                    grid-column: span 2;
+                }
+
+                @include media('mobile') {
+                    grid-column: auto;
+                }
+            }
         }
     }
 

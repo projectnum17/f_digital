@@ -14,12 +14,19 @@
     }
 
     &__arrow {
+        width: rem(24px);
+        height: rem(24px);
         position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
         right: rem(24px);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            width: rem(16px);
+            height: rem(16px);
+            right: rem(16px);
+        }
     }
 
     .select-hidden {
@@ -55,6 +62,12 @@
         color: var(--lght_grey);
         border: 1px solid var(--lght_grey);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            border-radius: rem(8px);
+            font-size: rem(14px);
+            height: rem(56px);
+            padding: rem(21px) rem(13px);
+        }
 
         &:hover,
         &:focus {
@@ -83,6 +96,10 @@
             .placeholder-text {
                 transform: translateY(-15px);
                 font-size: rem(14px);
+                @include media('mobile') {
+                    transform: translateY(-10px);
+                    font-size: rem(12px);
+                }
             }
 
             .selected-text {
@@ -170,6 +187,12 @@
         background: var(--white);
         box-shadow: 0px 8px 12px 0px #0000000f;
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            bottom: rem(-3px);
+            border-radius: rem(8px);
+            padding: rem(10px) rem(12px);
+            max-height: rem(170px);
+        }
 
         li {
             border-radius: rem(8px);
@@ -184,6 +207,12 @@
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+
+            @include media('mobile') {
+                font-size: rem(14px);
+                border-radius: rem(6px);
+                padding: rem(10px) rem(8px);
+            }
 
             &:first-child {
                 display: none;

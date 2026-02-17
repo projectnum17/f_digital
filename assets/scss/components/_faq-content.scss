@@ -10,4 +10,10 @@
     border-radius: rem(40px);
     background: var(--white);
     border: 1px solid var(--simple_prpl);
+
+    @include media('mobile') {
+        padding: rem(19px);
+        border-radius: rem(16px);
+        gap: rem(4px);
+    }
 }

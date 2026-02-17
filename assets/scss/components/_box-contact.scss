@@ -7,6 +7,12 @@
     background: var(--white);
     border: 1px solid var(--simple_prpl);
 
+    @include media('mobile') {
+        padding: rem(19px) rem(21px);
+        width: 100%;
+        border-radius: rem(16px);
+    }
+
     &:has(.contact-box__pic) {
         padding: rem(47px) rem(57px);
     }
@@ -19,6 +25,10 @@
     &__text {
         font: 400 #{rem(18px)} / 100% var(--ff-base);
         margin-bottom: rem(32px);
+        @include media('mobile') {
+            font-size: rem(14px);
+            margin-bottom: rem(16px);
+        }
     }
 
     &__soc {
@@ -26,10 +36,17 @@
         align-items: center;
         gap: rem(12px);
         margin-bottom: rem(32px);
+        @include media('mobile') {
+            margin-bottom: rem(16px);
+        }
 
         li {
             width: rem(80px);
             height: rem(80px);
+            @include media('mobile') {
+                width: rem(48px);
+                height: rem(48px);
+            }
         }
 
         a {
@@ -44,10 +61,15 @@
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+
             @include hover {
                 img {
                     transform: scale(1.05);
                 }
+            }
+
+            @include media('mobile') {
+                border-radius: rem(12px);
             }
 
             img {
@@ -57,6 +79,11 @@
                     0.3s,
                     cubic-bezier(0.768, 0.304, 0.496, 0.884)
                 );
+
+                @include media('mobile') {
+                    width: rem(32px);
+                    height: rem(32px);
+                }
             }
         }
     }
@@ -67,6 +94,12 @@
         align-items: center;
         gap: rem(12px);
         font: 700 #{rem(32px)} / 100% var(--ff-base);
+
+        @include media('mobile') {
+            gap: rem(8px);
+            font-size: rem(24px);
+        }
+
         @include hover {
             img {
                 transform: rotate(10deg);
@@ -76,7 +109,14 @@
         img {
             width: rem(40px);
             height: rem(40px);
-            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include media('mobile') {
+                width: rem(32px);
+                height: rem(32px);
+            }
         }
     }
 }

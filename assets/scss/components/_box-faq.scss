@@ -11,6 +11,10 @@
     @include hover {
         background: #f2eef4;
     }
+    @include media('mobile') {
+        padding: rem(14px) rem(16px);
+        border-radius: rem(12px);
+    }
 
     &.is-open {
         background: #f2eef4;
@@ -36,6 +40,9 @@
         align-items: center;
         justify-content: space-between;
         gap: rem(20px);
+        @include media('mobile') {
+            font-size: rem(14px);
+        }
 
         &::after {
             content: '';
@@ -49,6 +56,10 @@
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+            @include media('mobile') {
+                width: rem(16px);
+                height: rem(16px);
+            }
         }
     }
 
@@ -64,6 +75,9 @@
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+            @include media('mobile') {
+                font-size: rem(14px);
+            }
         }
     }
 }

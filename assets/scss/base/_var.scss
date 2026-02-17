@@ -28,10 +28,12 @@
 
 @include media('tablet') {
     :root {
+        --section-indent: #{rem(80px)};
     }
 }
 
 @include media('mobile') {
     :root {
+        --section-indent: #{rem(60px)};
     }
 }

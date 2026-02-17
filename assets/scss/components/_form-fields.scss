@@ -93,6 +93,12 @@
             height: rem(16px);
             background: url('../imgs/ico/ico-req.svg') no-repeat center center /
                 cover;
+
+            @include media('mobile') {
+                width: rem(14px);
+                height: rem(14px);
+                right: rem(16px);
+            }
         }
     }
 
@@ -107,6 +113,11 @@
         border: 1px solid #c8c8c8;
         background: var(--white);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            font-size: rem(14px);
+            border-radius: rem(8px);
+            padding: rem(27px) rem(35px) rem(10px) rem(13px);
+        }
 
         &::placeholder {
             color: rgba(37, 12, 52, 0.4);
@@ -128,6 +139,10 @@
         top: rem(15px);
         font: 400 #{rem(14px)} / 100% var(--ff-base);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            font-size: rem(12px);
+            left: rem(13px);
+        }
     }
 }
 
@@ -192,6 +207,10 @@
         align-items: flex-start;
         gap: rem(12px);
         max-width: rem(500px);
+        @include media('mobile') {
+            font-size: rem(14px);
+            gap: rem(8px);
+        }
 
         &::before {
             content: '';
@@ -204,6 +223,10 @@
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+            @include media('mobile') {
+                width: rem(20px);
+                height: rem(20px);
+            }
         }
 
         &::after {
@@ -219,6 +242,10 @@
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+            @include media('mobile') {
+                width: rem(20px);
+                height: rem(20px);
+            }
         }
     }
 }
@@ -234,5 +261,10 @@
     @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     @include hover {
         background: var(--drk_prpl);
+    }
+    @include media('mobile') {
+        font-size: rem(16px);
+        border-radius: rem(8px);
+        padding: rem(17px);
     }
 }

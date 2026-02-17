@@ -12,6 +12,12 @@
     border-radius: rem(24px);
     border: 2px solid transparent;
 
+    @include media('mobile') {
+        max-width: 100%;
+        padding: rem(18px);
+        border-radius: rem(12px);
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -98,9 +104,21 @@
     &__pic {
         width: rem(88px);
         height: rem(88px);
+
+        @include media('mobile') {
+            width: rem(60px);
+            height: rem(60px);
+        }
     }
 
     &__title {
         font: 700 #{rem(20px)} / 100% var(--ff-base);
+
+        @include media('desktop') {
+            font-size: rem(18px);
+        }
+        @include media('mobile') {
+            font-size: rem(16px);
+        }
     }
 }

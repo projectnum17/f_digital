@@ -9,6 +9,12 @@
     overflow: hidden;
     background-color: var(--white);
     border: 1px solid var(--simple_prpl);
+
+    @include media('mobile') {
+        padding: rem(19px);
+        border-radius: rem(16px);
+    }
+
     @include hover {
         .blog-box__pic img {
             transform: scale(1.15);
@@ -28,6 +34,11 @@
         margin-bottom: rem(28px);
         border: 1px solid var(--simple_prpl);
 
+        @include media('mobile') {
+            border-radius: rem(12px);
+            margin-bottom: rem(20px);
+        }
+
         img {
             width: 100%;
             height: 100%;
@@ -45,18 +56,33 @@
         display: flex;
         flex-direction: column;
         gap: rem(12px);
+
+        @include media('mobile') {
+            padding: 0;
+            gap: rem(8px);
+            margin-bottom: rem(12px);
+        }
     }
 
     &__date {
         font: 400 #{rem(16px)} / 90% var(--ff-base);
+        @include media('mobile') {
+            font-size: rem(13px);
+        }
     }
 
     &__title {
         font: 700 #{rem(24px)} / 90% var(--ff-base);
+        @include media('mobile') {
+            font-size: rem(18px);
+        }
     }
 
     &__desce {
         font: 400 #{rem(16px)} / 140% var(--ff-base);
+        @include media('mobile') {
+            font-size: rem(14px);
+        }
     }
 
     &__deco {
@@ -68,6 +94,10 @@
         position: relative;
         width: max-content;
         color: var(--lght_prpl);
+        @include media('mobile') {
+            font-size: rem(13px);
+            margin: 0;
+        }
 
         span {
             position: relative;
@@ -91,6 +121,10 @@
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+            @include media('mobile') {
+                width: rem(20px);
+                height: rem(20px);
+            }
         }
     }
 }

@@ -24,6 +24,9 @@ main {
     flex: 1;
     border-radius: 0 0 rem(60px) rem(60px);
     background: var(--lght_grey);
+    @include media('tablet') {
+        border-radius: 0;
+    }
 }
 
 footer {

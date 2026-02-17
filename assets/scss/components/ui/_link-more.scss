@@ -9,6 +9,9 @@
     position: relative;
     width: max-content;
     color: var(--lght_prpl);
+    @include media('mobile') {
+        font-size: rem(13px);
+    }
 
     span {
         position: relative;
@@ -35,5 +38,9 @@
         width: rem(24px);
         height: rem(24px);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            width: rem(20px);
+            height: rem(20px);
+        }
     }
 }

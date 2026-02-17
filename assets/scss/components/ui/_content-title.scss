@@ -6,4 +6,11 @@
     span {
         color: var(--lght_prpl);
     }
+
+    @include media('tablet') {
+        font-size: rem(42px);
+    }
+    @include media('mobile') {
+        font-size: rem(32px);
+    }
 }

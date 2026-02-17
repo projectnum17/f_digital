@@ -2,8 +2,25 @@
 @use '../../base/mixins' as *;
 
 .tariffs {
+    @include media('mobile') {
+        overflow: hidden;
+    }
     .container {
         max-width: var(--container-lg);
+    }
+
+    &:has(.tariffs__content) {
+        .container {
+            @include media('mobile') {
+                padding: 0;
+            }
+        }
+
+        .tariffs__handler {
+            @include media('mobile') {
+                padding-inline: var(--container-padding);
+            }
+        }
     }
 
     &:not(:has(.tariffs__content)) {
@@ -24,6 +41,10 @@
         border-radius: rem(40px);
         background: var(--accent_gradient);
         color: var(--lght_grey);
+        @include media('mobile') {
+            border-radius: 0;
+            min-height: rem(500px);
+        }
     }
 
     &__head {
@@ -35,6 +56,11 @@
         margin-bottom: rem(40px);
         position: relative;
         z-index: 2;
+
+        @include media('mobile') {
+            gap: rem(12px);
+            margin-bottom: rem(24px);
+        }
     }
 
     &__flow {
@@ -45,6 +71,11 @@
         gap: rem(24px);
         width: 100%;
         justify-content: center;
+
+        @include media('mobile') {
+            flex-direction: column;
+            gap: rem(12px);
+        }
 
         .select-box {
             position: relative;
@@ -72,18 +103,28 @@
                 top: rem(-30px);
                 width: rem(98px);
                 height: rem(20px);
+                @include media('tablet') {
+                    display: none;
+                }
             }
         }
     }
 
     &__subtitle {
         font: 400 #{rem(18px)} / 90% var(--ff-base);
+        @include media('mobile') {
+            font-size: rem(16px);
+        }
     }
 
     &__deco {
         position: absolute;
         pointer-events: none;
         bottom: 0;
+
+        @include media('mobile') {
+            max-width: rem(170px);
+        }
 
         &.deco-l {
             left: 0;
@@ -99,21 +140,27 @@
         gap: rem(32px);
         max-width: rem(1608px);
         margin: rem(-200px) auto 0 auto;
+        @include media('mobile') {
+            margin: rem(-150px) auto 0 auto;
+        }
     }
 
     .btn-nav {
         margin-bottom: var(--section-indent);
+        @include media('mobile') {
+            display: none;
+        }
     }
 
     &__slider {
         padding-bottom: var(--section-indent);
+        @include media('mobile') {
+            overflow: visible;
+            width: 100%;
+        }
         &-slide {
             height: auto;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;
             .tariff-box {
-                // height: rem(600px);
                 width: 100%;
                 max-width: 100%;
             }

@@ -13,6 +13,12 @@
     background: var(--white);
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
+    @include media('mobile') {
+        border-radius: rem(16px);
+        max-width: 100%;
+        padding: rem(36px) rem(16px) rem(20px) rem(16px);
+    }
+
     @include hover {
         .tariff-box__info {
             .row span {
@@ -76,11 +82,21 @@
         position: absolute;
         top: rem(24px);
         color: var(--lght_prpl);
+        @include media('mobile') {
+            font-size: rem(14px);
+            left: rem(16px);
+            top: rem(16px);
+        }
     }
 
     &__name {
         font: 700 #{rem(32px)} / 90% var(--ff-base);
         margin-bottom: rem(24px);
+
+        @include media('mobile') {
+            font-size: rem(20px);
+            margin-bottom: rem(12px);
+        }
     }
 
     &__price {
@@ -89,11 +105,20 @@
         gap: rem(6px);
         margin-bottom: rem(32px);
         font: 700 #{rem(18px)} / 90% var(--ff-base);
+        @include media('mobile') {
+            font-size: rem(16px);
+            margin-bottom: rem(22px);
+            gap: rem(4px);
+        }
 
         span {
             margin-bottom: rem(-5px);
             font: 700 #{rem(52px)} / 90% var(--ff-base);
             color: var(--lght_prpl);
+
+            @include media('mobile') {
+                font-size: rem(32px);
+            }
         }
     }
 
@@ -105,38 +130,62 @@
         img {
             width: rem(60px);
             height: rem(60px);
+            @include media('mobile') {
+                width: rem(40px);
+                height: rem(40px);
+            }
         }
     }
 
     &__head {
-        padding-bottom: rem(23px);
+        padding-bottom: rem(24px);
         margin-bottom: rem(24px);
         border-bottom: 1px solid rgba(37, 12, 52, 0.2);
+        @include media('mobile') {
+            padding-bottom: rem(16px);
+            margin-bottom: rem(16px);
+        }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         gap: rem(8px);
+        @include media('mobile') {
+            gap: rem(4px);
+        }
 
         > p {
             margin: 0;
             font: 400 #{rem(18px)} / 90% var(--ff-base);
+            @include media('mobile') {
+                font-size: rem(14px);
+            }
         }
 
         .row {
             display: flex;
             align-items: flex-end;
             gap: rem(8px);
+            @include media('mobile') {
+                align-items: baseline;
+                gap: rem(4px);
+            }
 
             span {
                 font: 700 #{rem(32px)} / 90% var(--ff-base);
                 color: var(--lght_prpl);
-                @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+                @include transitions(
+                    0.5s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
             }
 
             p {
                 font: 400 #{rem(18px)} / 90% var(--ff-base);
+                @include media('mobile') {
+                    font-size: rem(14px);
+                }
             }
         }
     }
@@ -151,6 +200,11 @@
         justify-content: center;
         border: 2px solid var(--lght_prpl);
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            font-size: rem(14px);
+            padding: rem(12px);
+            border-radius: rem(8px);
+        }
     }
 
     &__hidden {
@@ -169,11 +223,18 @@
     }
 
     &__list {
+        display: flex;
+        flex-direction: column;
         margin-bottom: rem(24px);
+
         li {
             &:not(:last-of-type):not(.tariff-box__hidden) {
                 margin-bottom: rem(16px);
+                @include media('mobile') {
+                    margin-bottom: rem(12px);
+                }
             }
+
             &:not(.tariff-box__hidden) {
                 display: inline-flex;
                 align-items: center;
@@ -186,11 +247,18 @@
                     flex-shrink: 0;
                     background: url('../imgs/ico/ico-check.svg') no-repeat
                         center center / cover;
+                    @include media('mobile') {
+                        width: rem(20px);
+                        height: rem(20px);
+                    }
                 }
             }
 
             p {
                 font: 400 #{rem(18px)} / 110% var(--ff-base);
+                @include media('mobile') {
+                    font-size: rem(16px);
+                }
 
                 span {
                     font-weight: 700;

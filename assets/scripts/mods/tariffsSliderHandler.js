@@ -12,6 +12,25 @@ const tariffsSliderHandler = () => {
             prevEl: '.js-tariffs-prev',
             nextEl: '.js-tariffs-next',
         },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 1,
+            },
+            991: {
+                slidesPerView: 2,
+            },
+            1199: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1440: {
+                slidesPerView: 4,
+            },
+        },
     });
 };
 

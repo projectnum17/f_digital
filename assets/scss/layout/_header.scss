@@ -59,7 +59,7 @@
     }
 
     &__bot {
-        border-bottom: 1px solid transparent;
+        border-bottom: 1px solid var(--simple_prpl);
         padding-block: rem(10px);
         background: var(--lght_grey);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
@@ -724,11 +724,14 @@
     }
 
     &__burger {
-        display: inline-flex;
+        display: none;
         position: relative;
         width: rem(24px);
         height: rem(24px);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('tablet') {
+            display: inline-flex;
+        }
 
         &.is-active {
             span:nth-child(1) {

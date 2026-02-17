@@ -2,10 +2,10 @@
 @use '../../base/mixins' as *;
 
 .faq {
-    margin-top: var(--section-top);
     margin-bottom: var(--section-indent);
 
     &--extended {
+        margin-top: var(--section-top);
         .faq-content {
             padding: rem(47px) rem(37px);
         }
@@ -21,8 +21,16 @@
 
     .contact-box {
         min-height: rem(506px);
+
+        @include media('tablet') {
+            min-height: auto;
+        }
+
         .content-title {
             margin-bottom: rem(20px);
+            @include media('mobile') {
+                margin-bottom: rem(14px);
+            }
         }
     }
 
@@ -55,5 +63,11 @@
         align-items: flex-start;
         display: flex;
         gap: rem(24px);
+        @include media('tablet') {
+            flex-direction: column;
+        }
+        @include media('mobile') {
+            gap: rem(12px);
+        }
     }
 }

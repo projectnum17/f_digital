@@ -4,6 +4,13 @@
 .connected {
     position: relative;
     color: var(--lght_grey);
+
+    .container {
+        @include media('mobile') {
+            padding: 0;
+        }
+    }
+
     &__content {
         border-radius: rem(40px);
         position: relative;
@@ -12,11 +19,19 @@
         margin: 0 auto;
         padding-inline: rem(80px);
         background: var(--accent_gradient);
+        @include media('mobile') {
+            border-radius: 0;
+            padding-block: var(--section-indent);
+            padding-inline: var(--container-padding);
+        }
     }
 
     .content-title {
         text-align: center;
         margin-bottom: rem(50px);
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+        }
     }
 
     &__list {
@@ -24,6 +39,10 @@
         grid-template-columns: repeat(3, 1fr);
         gap: rem(40px) rem(60px);
         counter-reset: faqCounter;
+        @include media('mobile') {
+            grid-template-columns: repeat(1, 1fr);
+            gap: rem(24px);
+        }
     }
 
     &__item {
@@ -35,6 +54,9 @@
 
         &:first-child {
             grid-column: span 3;
+            @include media('mobile') {
+                grid-column: auto;
+            }
 
             .connected__text {
                 margin-bottom: rem(12px);
@@ -52,16 +74,31 @@
             width: rem(48px);
             height: rem(48px);
             background: rgba(242, 242, 242, 0.08);
+
+            @include media('mobile') {
+                font-size: rem(18px);
+                width: rem(36px);
+                height: rem(36px);
+                border-radius: rem(6px);
+                margin-bottom: rem(8px);
+            }
         }
     }
 
     &__subtitle {
         font: 700 #{rem(24px)} / 100% var(--ff-base);
         margin-bottom: rem(12px);
+        @include media('mobile') {
+            font-size: rem(18px);
+            margin-bottom: rem(8px);
+        }
     }
 
     &__text {
         font: 400 #{rem(16px)} / 100% var(--ff-base);
+        @include media('mobile') {
+            font-size: rem(14px);
+        }
     }
 
     &__phones {
@@ -80,6 +117,10 @@
             img {
                 transform: rotate(10deg);
             }
+        }
+
+        @include media('mobile') {
+            font-size: rem(22px);
         }
 
         img {
@@ -105,12 +146,23 @@
             color: var(--lght_grey);
             background: var(--lght_prpl);
         }
+        @include media('mobile') {
+            max-width: 100%;
+            font-size: rem(16px);
+            border-radius: rem(6px);
+            padding: rem(15px);
+            width: 100%;
+            justify-content: center;
+        }
     }
 
     &__deco {
         position: absolute;
         top: 47%;
         transform: translateY(-50%);
+        @include media('mobile') {
+            display: none;
+        }
 
         &.deco-l {
             left: 0;
