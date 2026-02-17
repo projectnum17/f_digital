@@ -7,10 +7,17 @@
     justify-content: center;
     gap: rem(16px);
 
+    @include media('mobile') {
+        gap: rem(12px);
+    }
+
     &__panel {
         display: flex;
         align-items: center;
         gap: rem(16px);
+        @include media('mobile') {
+            gap: rem(8px);
+        }
     }
 
     &__arrow {
@@ -19,6 +26,11 @@
         width: rem(32px);
         height: rem(32px);
         color: var(--lght_prpl);
+
+        @include media('mobile') {
+            width: rem(24px);
+            height: rem(24px);
+        }
         svg {
             width: 100%;
             height: 100%;
@@ -39,6 +51,12 @@
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         @include hover {
             border-color: var(--lght_prpl);
+        }
+        @include media('mobile') {
+            font-size: rem(16px);
+            width: rem(32px);
+            height: rem(32px);
+            border-radius: rem(6px);
         }
 
         &.is-active {

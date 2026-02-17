@@ -13,6 +13,14 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: rem(24px);
         margin-bottom: rem(60px);
+        @include media('tablet') {
+            gap: rem(12px);
+            margin-bottom: rem(40px);
+        }
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
     }
 
     &__filters {
@@ -20,6 +28,17 @@
         flex-wrap: wrap;
         gap: rem(12px);
         margin-bottom: rem(44px);
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+            gap: rem(8px);
+            flex-wrap: nowrap;
+            overflow: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
     }
 
     &__more {
@@ -34,6 +53,12 @@
         @include hover {
             background: var(--lght_prpl);
             color: var(--lght_grey);
+        }
+        @include media('mobile') {
+            max-width: 100%;
+            width: 100%;
+            justify-content: center;
+            padding: rem(15px);
         }
     }
 }

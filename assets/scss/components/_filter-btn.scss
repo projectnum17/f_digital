@@ -16,6 +16,12 @@
         border-color: var(--lght_prpl);
         background: #d5c8dd33;
     }
+    @include media('mobile') {
+        flex-shrink: 0;
+        font-size: rem(14px);
+        gap: rem(6px);
+        padding: rem(8px) rem(12px);
+    }
     &.is-active {
         background: var(--lght_prpl);
         color: var(--lght_grey);
@@ -24,5 +30,9 @@
         width: rem(24px);
         height: rem(24px);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            width: rem(20px);
+            height: rem(20px);
+        }
     }
 }
