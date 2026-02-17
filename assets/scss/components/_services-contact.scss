@@ -5,11 +5,18 @@
     &__title {
         font: 700 #{rem(40px)} / 90% var(--ff-base);
         margin-bottom: rem(16px);
+        @include media('mobile') {
+            font-size: rem(24px);
+            margin-bottom: rem(12px);
+        }
     }
 
     &__text {
         font: 400 #{rem(18px)} / 140% var(--ff-base);
         margin-bottom: rem(20px);
+        @include media('mobile') {
+            font-size: rem(14px);
+        }
     }
 
     &__details {
@@ -19,15 +26,26 @@
         padding: rem(32px) rem(40px);
         border-radius: rem(16px);
         background: rgba(213, 200, 221, 0.2);
+        @include media('mobile') {
+            padding: rem(16px);
+            border-radius: rem(12px);
+            gap: rem(16px);
+        }
     }
 
     &__data {
         display: flex;
         flex-direction: column;
         gap: rem(16px);
+        @include media('mobile') {
+            gap: rem(12px);
+        }
         &:not(:last-child) {
             padding-bottom: rem(20px);
             border-bottom: 1px solid #d5c8dd;
+            @include media('mobile') {
+                padding-bottom: rem(16px);
+            }
         }
     }
 
@@ -35,6 +53,9 @@
         display: flex;
         flex-direction: column;
         gap: rem(12px);
+        @include media('mobile') {
+            gap: rem(8px);
+        }
 
         .row {
             display: flex;
@@ -45,20 +66,33 @@
             img {
                 width: rem(24px);
                 height: rem(24px);
+                @include media('mobile') {
+                    width: rem(16px);
+                    height: rem(16px);
+                }
             }
 
             p {
                 font: 400 #{rem(16px)} / 100% var(--ff-base);
+                @include media('mobile') {
+                    font-size: rem(13px);
+                }
             }
         }
     }
 
     &__address {
         font: 700 #{rem(16px)} / 110% var(--ff-base);
+        @include media('mobile') {
+            font-size: rem(14px);
+        }
     }
 
     &__call {
         width: max-content;
         font: 700 #{rem(24px)} / 90% var(--ff-base);
+        @include media('mobile') {
+            font-size: rem(18px);
+        }
     }
 }

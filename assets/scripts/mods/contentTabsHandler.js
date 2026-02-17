@@ -19,6 +19,11 @@ const contentTabsHandler = (tabsWrapper, tabsEls, content) => {
         tabContent[i].classList.remove('tab-hide');
         tabContent[i].classList.add('tab-show', 'tab-fade');
         tabs[i].classList.add('is-active');
+        tabs[i].scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center',
+            block: 'nearest',
+        });
     };
 
     hideTabContent();

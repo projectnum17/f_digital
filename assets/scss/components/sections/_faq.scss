@@ -17,6 +17,9 @@
 
     .content-title {
         margin-bottom: rem(32px);
+        @include media('mobile') {
+            margin-bottom: rem(16px);
+        }
     }
 
     .contact-box {
