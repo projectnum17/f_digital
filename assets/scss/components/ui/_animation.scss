@@ -1,0 +1,15 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.js-scroll {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0) scale3d(0.96, 0.96, 1);
+    transform-style: preserve-3d;
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+
+    &._animated {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+}

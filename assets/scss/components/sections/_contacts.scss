@@ -14,6 +14,7 @@
     &__content {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         gap: rem(24px);
         @include media('tablet') {
             flex-direction: column;

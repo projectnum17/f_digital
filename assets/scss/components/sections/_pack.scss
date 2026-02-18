@@ -6,10 +6,18 @@
 
     .content-title {
         margin-bottom: rem(24px);
+        @include media('mobile') {
+            margin-bottom: rem(20px);
+        }
     }
 
     .cta {
         margin-bottom: rem(64px);
+        @include media('mobile') {
+            margin-bottom: rem(20px);
+            width: 100%;
+            justify-content: center;
+        }
     }
 
     &__box {
@@ -21,6 +29,13 @@
         border-radius: rem(40px);
         background: var(--white);
         border: 1px solid var(--simple_prpl);
+        @include media('desktop') {
+            flex-direction: column;
+        }
+        @include media('mobile') {
+            padding: rem(19px);
+            border-radius: rem(16px);
+        }
     }
 
     &__text {
@@ -30,12 +45,24 @@
 
     &__info {
         max-width: rem(628px);
+        flex-shrink: 0;
+        @include media('desktop') {
+            max-width: 100%;
+            flex-shrink: inherit;
+        }
     }
 
     &__pic {
         max-width: rem(612px);
         border-radius: rem(20px);
         overflow: hidden;
+        @include media('desktop') {
+            margin: 0 auto;
+        }
+        @include media('mobile') {
+            max-width: 100%;
+            border-radius: rem(12px);
+        }
     }
 
     &__list {
@@ -45,6 +72,13 @@
         border-radius: rem(16px);
         padding: rem(32px);
         background: rgba(213, 200, 221, 0.2);
+        @include media('desktop') {
+            justify-content: center;
+        }
+        @include media('mobile') {
+            flex-direction: column;
+            padding: rem(20px);
+        }
 
         li {
             min-width: rem(140px);
@@ -52,20 +86,40 @@
             align-items: center;
             gap: rem(12px);
             max-width: rem(200px);
+            @include media('mobile') {
+                max-width: 100%;
+                width: 100%;
+                justify-content: center;
+                gap: rem(8px);
+            }
 
             &:nth-child(2) {
                 padding-inline: rem(20px);
                 border-left: 1px solid #d5c8dd;
                 border-right: 1px solid #d5c8dd;
+                @include media('mobile') {
+                    padding-block: rem(12px);
+                    border-left: none;
+                    border-right: none;
+                    border-top: 1px solid #d5c8dd;
+                    border-bottom: 1px solid #d5c8dd;
+                }
             }
 
             img {
                 width: rem(52px);
                 height: rem(52px);
+                @include media('mobile') {
+                    width: rem(40px);
+                    height: rem(40px);
+                }
             }
 
             p {
                 font: 700 #{rem(18px)} / 90% var(--ff-base);
+                @include media('mobile') {
+                    font-size: rem(16px);
+                }
             }
         }
     }

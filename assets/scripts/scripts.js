@@ -1,5 +1,6 @@
 'use strict';
 
+import animationHandler from './mods/animationHandler.js';
 import headerHandler from './mods/headerHandler.js';
 import videoAsyncHandler from './mods/videoAsyncHandler.js';
 import selectInit from './mods/selectInit.js';
@@ -13,6 +14,7 @@ import formModalHandler from './mods/formModalHandler.js';
 import faqFiltersHandler from './mods/faqFiltersHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    animationHandler();
     headerHandler();
     videoAsyncHandler();
     selectInit();

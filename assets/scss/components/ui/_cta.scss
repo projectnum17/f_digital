@@ -15,5 +15,6 @@
     @include media('mobile') {
         font-size: rem(16px);
         padding: rem(15px);
+        border-radius: rem(8px);
     }
 }

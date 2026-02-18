@@ -230,7 +230,7 @@
     <main class="main">
         <section class="contacts">
             <div class="container">
-                <ul class="breadcrumbs">
+                <ul class="breadcrumbs js-scroll">
                     <li>
                         <a href="javascript: void(0)">Головна</a>
                     </li>
@@ -238,10 +238,10 @@
                         <a href="javascript: void(0)">Контакти</a>
                     </li>
                 </ul>
-                <h2 class="content-title">Контакти</h2>
+                <h2 class="content-title js-scroll">Контакти</h2>
                 <div class="contacts__content">
                     <ul class="contacts__info">
-                        <li class="contacts__item">
+                        <li class="contacts__item js-scroll">
                             <div class="contacts__route">
                                 <div class="contacts__address">
                                     <div class="contacts__text">
@@ -284,7 +284,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="contacts__item">
+                        <li class="contacts__item js-scroll">
                             <div class="contacts__route">
                                 <div class="contacts__address">
                                     <div class="contacts__text">
@@ -358,7 +358,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="contacts__item">
+                        <li class="contacts__item js-scroll">
                             <div class="contacts__route">
                                 <div class="contacts__address">
                                     <div class="contacts__text">
@@ -428,7 +428,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="contacts__item">
+                        <li class="contacts__item js-scroll">
                             <div class="contacts__route">
                                 <div class="contacts__address">
                                     <div class="contacts__text">
@@ -474,29 +474,29 @@
                         </li>
                     </ul>
                     <div class="contacts__form">
-                        <div class="contacts__pic">
+                        <div class="contacts__pic js-scroll">
                             <img src="./assets/imgs/pic_7.svg" alt="Picture">
                         </div>
                         <div class="contacts__box">
-                            <h2 class="content-title">Зворотній зв’язок</h2>
+                            <h2 class="content-title js-scroll">Зворотній зв’язок</h2>
                             <div class="form-contact">
                                 <form>
                                     <div class="form-contact__radios">
-                                        <div class="form-radio">
+                                        <div class="form-radio js-scroll">
                                             <input class="form-radio__item" type="radio" name="formRadio"
                                                 id="formRadio_1">
                                             <label class="form-radio__title" for="formRadio_1">
                                                 Заявка на підключення
                                             </label>
                                         </div>
-                                        <div class="form-radio">
+                                        <div class="form-radio js-scroll">
                                             <input class="form-radio__item" type="radio" name="formRadio"
                                                 id="formRadio_2">
                                             <label class="form-radio__title" for="formRadio_2">
                                                 Проблеми з інтернетом
                                             </label>
                                         </div>
-                                        <div class="form-radio">
+                                        <div class="form-radio js-scroll">
                                             <input class="form-radio__item" type="radio" name="formRadio"
                                                 id="formRadio_3">
                                             <label class="form-radio__title" for="formRadio_3">
@@ -505,35 +505,35 @@
                                         </div>
                                     </div>
                                     <div class="form-contact__fields">
-                                        <div class="form-field form-field--required">
+                                        <div class="form-field form-field--required js-scroll">
                                             <label class="form-field__title" for="contactName">
                                                 Ваше ім’я
                                             </label>
                                             <input required class="form-field__box" type="text" name="contactName"
                                                 id="contactName" placeholder="Як до вас звертатись?">
                                         </div>
-                                        <div class="form-field form-field--required">
+                                        <div class="form-field form-field--required js-scroll">
                                             <label class="form-field__title" for="contactEmail">
                                                 Email
                                             </label>
                                             <input required class="form-field__box" type="text" name="contactEmail"
                                                 id="contactEmail" placeholder="example@gmail.com">
                                         </div>
-                                        <div class="form-field form-field--required">
+                                        <div class="form-field form-field--required js-scroll">
                                             <label class="form-field__title" for="contactPhone">
                                                 Номер телефону
                                             </label>
                                             <input required class="form-field__box" type="text" name="contactPhone"
                                                 id="contactPhone" placeholder="+38 (XXX) XXX XX XX">
                                         </div>
-                                        <div class="form-message">
+                                        <div class="form-message js-scroll">
                                             <label class="form-message__title" for="contactMessage">
                                                 Ваш коментар
                                             </label>
                                             <textarea class="form-message__box" name="contactMessage"
                                                 id="contactMessage"></textarea>
                                         </div>
-                                        <div class="form-consent">
+                                        <div class="form-consent js-scroll">
                                             <input name="contactConsent" id="contactConsent" type="checkbox"
                                                 class="form-consent__box">
                                             <label for="contactConsent" class="form-consent__title">
@@ -541,9 +541,11 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="form-submit">
-                                        Залишити заявку
-                                    </button>
+                                    <div class="js-scroll">
+                                        <button type="submit" class="form-submit">
+                                            Залишити заявку
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
