@@ -370,4 +370,20 @@
             justify-content: center;
         }
     }
+
+    .container {
+        @include media('mobile') {
+            padding: 0;
+        }
+    }
+
+    @include media('mobile') {
+        .breadcrumbs,
+        .content-title,
+        .pay__tabs,
+        .pay__content,
+        .pay__terminals {
+            padding-inline: var(--container-padding);
+        }
+    }
 }

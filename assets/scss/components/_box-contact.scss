@@ -15,6 +15,13 @@
 
     &:has(.contact-box__pic) {
         padding: rem(47px) rem(57px);
+        @include media('mobile') {
+            padding: rem(19px);
+
+            .content-title {
+                padding: 0;
+            }
+        }
     }
 
     &__pic {
