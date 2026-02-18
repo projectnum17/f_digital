@@ -7,6 +7,17 @@
         flex-direction: column;
         gap: rem(20px);
         margin-bottom: rem(32px);
+        @include media('tablet') {
+            flex-direction: row;
+            align-items: center;
+        }
+        @include media('mobile') {
+            flex-direction: column;
+            gap: rem(8px);
+            margin-bottom: rem(24px);
+            align-items: flex-start;
+            margin-bottom: rem(20px);
+        }
     }
 
     &__fields {
@@ -14,5 +25,9 @@
         flex-direction: column;
         gap: rem(20px);
         margin-bottom: rem(20px);
+        @include media('mobile') {
+            gap: rem(12px);
+            margin-bottom: rem(12px);
+        }
     }
 }
