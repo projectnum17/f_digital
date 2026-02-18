@@ -6,6 +6,7 @@
     flex-direction: column;
     gap: rem(8px);
     @include media('desktop') {
+        justify-content: space-between;
         flex-direction: row;
         overflow: auto;
         scrollbar-width: none;

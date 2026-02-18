@@ -60,7 +60,7 @@ section.connected:last-child {
     }
 }
 
-body:has(section.services) {
+body:has(section.services, section.clients) {
     main {
         @include media('mobile') {
             background: var(--white);
