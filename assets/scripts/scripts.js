@@ -1,6 +1,7 @@
 'use strict';
 
 import animationHandler from './mods/animationHandler.js';
+import mobileMenu from './mods/mobileMenu.js';
 import headerHandler from './mods/headerHandler.js';
 import videoAsyncHandler from './mods/videoAsyncHandler.js';
 import selectInit from './mods/selectInit.js';
@@ -15,6 +16,7 @@ import faqFiltersHandler from './mods/faqFiltersHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     animationHandler();
+    mobileMenu();
     headerHandler();
     videoAsyncHandler();
     selectInit();

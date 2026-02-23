@@ -20,16 +20,16 @@ const formModalHandler = () => {
     };
 
     modalTriggers.forEach((trigger) =>
-        trigger.addEventListener('click', showModal),
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showModal();
+        }),
     );
 
     modalClose.addEventListener('click', closeModal);
 
-    document.addEventListener('click', (e) => {
-        if (
-            !modalContent.contains(e.target) &&
-            !e.target.closest('.js-modal-trigger')
-        ) {
+    modalBox.addEventListener('click', (e) => {
+        if (!modalContent.contains(e.target)) {
             closeModal();
         }
     });
